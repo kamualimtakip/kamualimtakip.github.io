@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kamu Alım Takip | Resmi ilan bağlantıları</title>
+<meta name="description" content="Kamu personel alımı ilanlarının resmi kaynak bağlantıları. Kadro, KPSS şartı ve son başvuru tarihi tek yerde.">
+<meta name="theme-color" content="#F3EEE3">
+<meta name="robots" content="noarchive">
+<link rel="icon" href="logo.png">
+<style>
+@font-face{font-family:Fraunces;src:url(fonts/Fraunces.ttf);font-weight:100 900;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url(fonts/InstrumentSans.ttf);font-weight:400 700;font-display:swap}
+:root{--kagit:#F3EEE3;--murekkep:#151515;--fosfor:#FFE14A;--kursun:#5E5A52;--beyaz:#fff;--kenar:#E9E2D3}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--kagit);color:var(--murekkep);font:400 17px/1.5 "Instrument Sans",system-ui,sans-serif}
+.sar{max-width:640px;margin:0 auto;padding:28px 16px 56px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+header img{width:56px;height:56px;border-radius:50%}
+.marka{font:800 22px/1.1 Fraunces,serif;font-variation-settings:"opsz" 9,"SOFT" 0,"WONK" 0}
+.alt{color:var(--kursun);font-size:15px}
+h1{font:800 34px/1.12 Fraunces,serif;font-variation-settings:"opsz" 9,"SOFT" 0,"WONK" 0;margin:0 0 10px}
+h1 mark{background:linear-gradient(transparent 12%,var(--fosfor) 12%,var(--fosfor) 88%,transparent 88%);padding:0 .12em;margin:0 -.12em;color:inherit}
+.giris{color:var(--kursun);margin:0 0 26px}
+article{background:var(--beyaz);border:2px solid var(--kenar);border-radius:22px;padding:22px 20px 18px;margin-bottom:16px}
+.ust{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+.kurum{font:700 13px/1 "Instrument Sans";letter-spacing:.09em;text-transform:uppercase;color:var(--kursun)}
+.etiket{background:var(--fosfor);font:700 13px/1 "Instrument Sans";padding:7px 12px;border-radius:99px;white-space:nowrap}
+article h2{font:800 26px/1.18 Fraunces,serif;font-variation-settings:"opsz" 9,"SOFT" 0,"WONK" 0;margin:0 0 12px}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0}
+.chips li{border:2px solid var(--kenar);border-radius:99px;padding:5px 12px;font-size:14.5px;font-weight:600}
+dl{margin:0 0 16px;display:grid;gap:8px}
+dl div{display:flex;justify-content:space-between;gap:14px;border-top:1px solid var(--kenar);padding-top:8px}
+dt{color:var(--kursun);font-size:14.5px}
+dd{margin:0;font-weight:600;text-align:right}
+.dugme{display:flex;justify-content:center;gap:8px;align-items:center;background:var(--murekkep);color:var(--fosfor);text-decoration:none;font-weight:700;border-radius:14px;padding:14px 16px;min-height:48px}
+.dugme:focus-visible{outline:3px solid var(--fosfor);outline-offset:3px}
+.kaynak,.not{color:var(--kursun);font-size:13.5px;margin:10px 0 0}
+.not{margin-top:4px}
+.bos{background:var(--beyaz);border:2px solid var(--kenar);border-radius:22px;padding:22px 20px}
+footer{color:var(--kursun);font-size:13.5px;margin-top:28px;border-top:2px solid var(--kenar);padding-top:16px}
+footer p{margin:0 0 8px}
+article[hidden]{display:none}
+.kontrol{margin:0 0 18px;display:grid;gap:10px}
+.kontrol label{font:700 13px/1 "Instrument Sans";letter-spacing:.09em;text-transform:uppercase;color:var(--kursun)}
+.kontrol input[type=search],.kontrol select{width:100%;min-height:48px;border:2px solid var(--kenar);border-radius:14px;background:var(--beyaz);color:var(--murekkep);font:600 16px "Instrument Sans",system-ui,sans-serif;padding:10px 14px}
+.kontrol input[type=search]{-webkit-appearance:none;appearance:none}
+.kontrol select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23151515' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+.kontrol input:focus-visible,.kontrol select:focus-visible,.kontrol summary:focus-visible,.chip:focus-visible,.temizle:focus-visible{outline:3px solid var(--murekkep);outline-offset:2px}
+.sira{display:grid;gap:6px}
+.filtre{background:var(--beyaz);border:2px solid var(--kenar);border-radius:14px}
+.filtre summary{list-style:none;cursor:pointer;min-height:48px;padding:12px 14px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.filtre summary::-webkit-details-marker{display:none}
+.filtre summary::after{content:"";width:10px;height:10px;border-right:2px solid var(--murekkep);border-bottom:2px solid var(--murekkep);transform:rotate(45deg);margin:-4px 4px 0 0;transition:transform .15s}
+.filtre[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+.sayac{background:var(--fosfor);border-radius:99px;font:700 13px/1 "Instrument Sans";padding:6px 10px;margin-left:auto}
+.sayac[hidden]{display:none}
+.grup{padding:2px 14px 14px;display:grid;gap:8px}
+.chiplar{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;border:2px solid var(--kenar);border-radius:99px;background:var(--beyaz);color:var(--murekkep);font:600 15px "Instrument Sans",system-ui,sans-serif;padding:8px 14px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--murekkep);border-color:var(--murekkep);color:var(--fosfor)}
+.chip small{font-weight:600;opacity:.65;margin-left:4px}
+.durum{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--kursun);font-size:14.5px;margin:0 0 14px}
+.temizle{min-height:44px;border:0;background:none;color:var(--murekkep);font:700 15px "Instrument Sans",system-ui,sans-serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:0 4px}
+.temizle[hidden]{display:none}
+.yok{background:var(--beyaz);border:2px dashed var(--kenar);border-radius:22px;padding:22px 20px;margin-bottom:16px}
+.yok[hidden]{display:none}
+.yok p{margin:0 0 10px}
+@media (min-width:560px){.kontrol .ikili{display:grid;grid-template-columns:1fr 1fr;gap:10px}}
+</style>
+</head>
+<body>
+<div class="sar">
+  <header><img src="logo.png" alt="Kamu Alım Takip logosu" width="56" height="56"><div><div class="marka">Kamu Alım Takip</div><div class="alt">@kamualimtakip</div></div></header>
+  <h1>Videolardaki ilanların <mark>resmi bağlantıları</mark></h1>
+  <p class="giris">Ara ve sırala; varsayılan sıra son başvuru tarihine göredir. Başvurmadan önce resmi ilan metnini mutlaka okuyun.</p>
+  
+  <section class="kontrol" id="kontrol" aria-label="İlanları ara ve sırala" hidden>
+    <div><label for="ara">Ara</label>
+    <input type="search" id="ara" placeholder="Ara: zabıta, tekniker, İzmir…" autocomplete="off" enterkeyhint="search"></div>
+    <div class="sira"><label for="sira">Sırala</label>
+    <select id="sira"><option value="yakin">Son başvuru: yakın tarih önce</option><option value="yeni">Yeni eklenen önce</option><option value="cok">Kadro sayısı: çok olan önce</option><option value="az">Kadro sayısı: az olan önce</option></select></div>
+  </section>
+  <p class="durum" aria-live="polite"><span id="durum">79 ilan</span><button type="button" class="temizle" id="temizle" hidden>Temizle</button></p>
+  <main id="liste">
+  <article id="ilan-0011" data-bitis="2026-11-08" data-kadro="11" data-eklendi="2026-10-21" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="ankara" data-ara="turkiye is kurumu genel mudurlugu iskur 11 bilisim personeli alinacak ankara (merkez) lisans kpss p3 puani siralamada kullaniliyor; kpss puani olmayan adayin puani 70 sayiliyor">
+    <div class="ust"><span class="kurum">İŞKUR</span><span class="etiket">Yarın son gün</span></div>
+    <h2>11 bilişim personeli alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>11</dd></div><div><dt>Görev yeri</dt><dd>Ankara (merkez)</dd></div><div><dt>Son başvuru</dt><dd>8 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.iskur.gov.tr/duyurular/turkiye-is-kurumu-genel-mudurlugu-sozlesmeli-bilisim-personeli-alimi-ilani-1/" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: iskur.gov.tr</p>
+  </article>
+  <article id="acik-0043" data-bitis="2026-11-08" data-kadro="40" data-eklendi="2026-10-29" data-egitim="akademik" data-tur="Üniversite" data-sehir="cankiri" data-ara="cankiri karatekin universitesi cankiri karatekin universitesi 40 ogretim uyesi alinacak cankiri cankiri karatekin universitesi: 40 kadro (13 profesor, 27 docent). yalnizca online basvuru (ilan.karatekin.edu.tr), 23 ekim - 8 kasim 2026; bir kadroya basvurulabilir. belirtilen bilim alaninda docentlik, calisma konusu ve yuksekogretimde 4-20 yil deneyim aranir. insan ve toplum bil. 5 (fiziki cografya, yenicag tarihi, genel turk tarihi: prof.; felsefe tarihi, toplumsal yapi ve degisme: doc.); fen 3 (analiz, genel fizik: prof.; organik kimya: doc.); iibf 5 (yonetim bilimleri: prof.; hukuk, siyasi tarih, devletler hukuku, iktisat teorisi: doc.). orman 5 (peyzaj planlama: prof.; bitki materyali, orman ekonomisi, havza yonetimi, toprak ilmi ve ekolojisi: doc.); muhendislik 5 (devreler ve sistemler, gida bilimleri: prof.; bilgisayar donanimi, temel islemler ve termodinamik, makine teorisi: doc.); saglik bil. 6 (cocuk gelisimi: prof.; diyetetik, hemsirelik esaslari, saglik ekonomisi, ergoterapi, ebelik: doc.). islami ilimler 2 (fikih prof.; arap dili ve belagati doc.); hukuk 2 docent (milletlerarasi hukuk; hukuk fakultesi mezunu); turizm 2 docent; myo: bitki koruma, is sagligi ve guvenligi prof.; cevre sagligi, optisyenlik, elektronik teknolojisi doc.">
+    <div class="ust"><span class="kurum">Çankırı Karatekin Üniversitesi</span><span class="etiket">Yarın son gün</span></div>
+    <h2>40 öğretim üyesi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>40</dd></div><div><dt>Görev yeri</dt><dd>Çankırı</dd></div><div><dt>Son başvuru</dt><dd>8 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261023-4-21.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0038" data-bitis="2026-11-08" data-kadro="3" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="edirne" data-ara="cumhurbaskanligi milli saraylar idaresi baskanligi milli saraylar idaresi 3 muze gorevlisi alinacak edirne lisans 3 muze gorevlisi (kazi gorevlisi), sozlesmeli personel (657 sayili kanun 4/b), milli saraylar idaresi baskanligi; gorev yeri edirne. aranan ogrenim: arkeoloji, sanat tarihi, arkeoloji ve sanat tarihi, klasik arkeoloji, tarih oncesi arkeolojisi, prehistorya, protohistorya ve on asya arkeolojisi veya turk islam arkeolojisi lisans bolumlerinden biri (ya da yok&#x27;ce denkligi kabul edilmis yurtdisi bolumler). son basvuru tarihi itibariyla 40 yasini doldurmamis olmak. ilanda kpss sarti yok; sinav uygulamali sinav + sozlu sinav. basvuru: 28 ekim - 8 kasim 2026, kariyer kapisi uzerinden e-devlet sifresiyle; sahsen, kargo ya da posta kabul edilmez.">
+    <div class="ust"><span class="kurum">Milli Saraylar İdaresi</span><span class="etiket">Yarın son gün</span></div>
+    <h2>3 müze görevlisi alınacak</h2>
+    <ul class="chips"><li>Lisans</li></ul>
+    <dl><div><dt>Kadro</dt><dd>3</dd></div><div><dt>Görev yeri</dt><dd>Edirne</dd></div><div><dt>Son başvuru</dt><dd>8 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261028-4-1.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0080" data-bitis="2026-11-08" data-kadro="3" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="" data-ara="milli saraylar idaresi baskanligi milli saraylar idaresi sozlesmeli personel pozisyonunda 3 muze gorevlisi (kazi gorevlisi) alimi sinav alinacak lisans">
+    <div class="ust"><span class="kurum">Milli Saraylar İdaresi</span><span class="etiket">Yarın son gün</span></div>
+    <h2>Sözleşmeli personel pozisyonunda 3 müze görevlisi (kazı görevlisi) alımı sınav alınacak</h2>
+    <ul class="chips"><li>Lisans</li></ul>
+    <dl><div><dt>Kadro</dt><dd>3</dd></div><div><dt>Son başvuru</dt><dd>8 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kariyerkapisi.gov.tr/IlanDetay?i=39c5ca3c-3571-485b-b226-2ff559360a0a" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kariyerkapisi.gov.tr</p>
+  </article>
+  <article id="acik-0081" data-bitis="2026-11-08" data-kadro="11" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="" data-ara="turkiye is kurumu (iskur) turkiye is kurumu 11 turkiye is kurumu genel mudurlugu sozlesmeli bilisim personeli giris sinavi alinacak lisans kpss p3 puan siralamasi">
+    <div class="ust"><span class="kurum">Türkiye İş Kurumu</span><span class="etiket">Yarın son gün</span></div>
+    <h2>11 türkiye iş kurumu genel müdürlüğü sözleşmeli bilişim personeli giriş sınavı alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>11</dd></div><div><dt>Son başvuru</dt><dd>8 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kariyerkapisi.gov.tr/IlanDetay?i=320d07cc-b5bc-4bab-9541-6c1100def856" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kariyerkapisi.gov.tr</p>
+  </article>
+  <article id="ilan-0022" data-bitis="2026-11-09" data-kadro="12" data-eklendi="2026-10-23" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="ankara" data-ara="orman genel mudurlugu orman genel mudurlugu 12 mufettis yardimcisi alinacak ankara (teftis kurulu) lisans kpss en az 75 (p3 / p4 / p48, bolume gore)">
+    <div class="ust"><span class="kurum">Orman Genel Müdürlüğü</span><span class="etiket">2 gün kaldı</span></div>
+    <h2>12 müfettiş yardımcısı alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS en az 75</li></ul>
+    <dl><div><dt>Kadro</dt><dd>12</dd></div><div><dt>Görev yeri</dt><dd>Ankara (Teftiş Kurulu)</dd></div><div><dt>Son başvuru</dt><dd>9 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.ogm.gov.tr/tr/duyurular" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: ogm.gov.tr</p>
+  </article>
+  <article id="acik-0023" data-bitis="2026-11-09" data-kadro="21" data-eklendi="2026-10-28" data-egitim="akademik" data-tur="Üniversite" data-sehir="nevsehir" data-ara="nevsehir haci bektas veli universitesi nevsehir hbv universitesi 21 ogretim uyesi alinacak nevsehir toplam 21 kadro (nevsehir haci bektas veli universitesi): 5 profesor, 9 docent, 7 doktor ogretim uyesi. basvuru ilanin resmi gazete&#x27;de yayimindan itibaren 15 gun icinde, sahsen veya posta ile: profesor/docent icin personel daire baskanligi, dr. ogr. uyesi icin ilgili fakulte dekanligi/meslek yuksekokulu mudurlugu. profesor (1&#x27;er): dis hekimligi fakultesi: agiz, dis ve cene cerrahisi, agiz, dis ve cene radyolojisi, protetik dis tedavisi; guzel sanatlar fakultesi: gorsel iletisim tasarimi (docentlik sinema); muhendislik mimarlik fakultesi: insaat muhendisligi, yapi (docentlik insaat muhendisligi). docent (1&#x27;er): fen-edebiyat: matematik (analiz ve fonksiyonlar teorisi), cin dili ve edebiyati, kimya (biyokimya); gulsehir sosyal bilimler myo: ozel guvenlik ve koruma, insan kaynaklari yonetimi; iktisadi ve idari bilimler: uluslararasi iliskiler (devletler hukuku); ilahiyat: arap dili ve belagati; muhendislik mimarlik: cevre muhendisligi. dr. ogr. uyesi: dis hekimligi: agiz, dis ve cene cerrahisi, pedodonti; egitim: okul oncesi egitimi; fen-edebiyat: japon dili ve edebiyati, gelisim psikolojisi; muhendislik: bilgisayar donanimi (lisans bilgisayar, yazilim, bilisim sistemleri vb. muhendislik); saglik bilimleri: hemsirelik esaslari (lisans hemsirelik).">
+    <div class="ust"><span class="kurum">Nevşehir HBV Üniversitesi</span><span class="etiket">2 gün kaldı</span></div>
+    <h2>21 öğretim üyesi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>21</dd></div><div><dt>Görev yeri</dt><dd>Nevşehir</dd></div><div><dt>Son başvuru</dt><dd>9 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261026-4-5.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0040" data-bitis="2026-11-09" data-kadro="20" data-eklendi="2026-10-29" data-egitim="akademik" data-tur="Üniversite" data-sehir="izmir" data-ara="dokuz eylul universitesi dokuz eylul universitesi 20 ogretim elemani alinacak izmir dokuz eylul universitesi: 20 kadro; 11 ogretim uyesi (6 profesor, 3 docent, 2 dr. ogr. uyesi) ve 9 ogretim gorevlisi. ogretim uyesi basvurusu deabs.deu.edu.tr uzerinden elektronik, resmi gazete&#x27;den itibaren 15 gun. tip fakultesi 8: profesor - cocuk ve ergen ruh sagligi, ic hastaliklari, gogus cerrahisi, goz, anesteziyoloji; docent - anesteziyoloji; dr. ogr. uyesi - ic hastaliklari, cocuk cerrahisi. ayrica buca egitim okul oncesi egitimi profesor, dis hekimligi restoratif dis tedavisi docent, ilahiyat arap dili ve belagati docent (arapca 85). 9 ogretim gorevlisi: tip fakultesi uygulamali birim 5 (uzman: acil tip, ic hastaliklari-hematoloji, radyasyon onkolojisi, radyoloji, anesteziyoloji); bergama myo alternatif enerji (enerji sistemleri muh. doktora); kiraz myo laborant ve veteriner saglik (veteriner ic hastaliklari doktora); saglik hizmetleri myo anestezi (uzman); yabanci diller yo (ingilizce ogretmenligi, ingiliz dili ve edebiyati veya amerikan kulturu ve edebiyati lisans ve yuksek lisans, 3 yil ders deneyimi). ogretim gorevlisi: ales en az 70, yabanci dil en az 50 (yabanci diller&#x27;de ingilizce 85); basvuru 26 ekim - 10 kasim 2026, sahsen veya posta.">
+    <div class="ust"><span class="kurum">Dokuz Eylül Üniversitesi</span><span class="etiket">2 gün kaldı</span></div>
+    <h2>20 öğretim elemanı alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>20</dd></div><div><dt>Görev yeri</dt><dd>İzmir</dd></div><div><dt>Son başvuru</dt><dd>9 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261026-4-1.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0039" data-bitis="2026-11-09" data-kadro="65" data-eklendi="2026-10-29" data-egitim="akademik" data-tur="Üniversite" data-sehir="elazig" data-ara="firat universitesi firat universitesi 65 ogretim uyesi alinacak elazig firat universitesi: 65 ogretim uyesi (21 profesor, 22 docent, 22 dr. ogr. uyesi) ve 15 ogretim elemani (12 arastirma gorevlisi, 3 ogretim gorevlisi). ogretim uyesi basvurusu ilandan itibaren 15 gun, personel dairesi baskanligina sahsen. profesor/docent icin ilgili bilim alaninda docentlik, dr. ogr. uyesi icin ilgili alanda doktora (tipta uzmanlik) ve her kadroda belirtilen calisma konusu aranir. birimler: tip fakultesi 17, muhendislik 10, teknoloji 8, veteriner 6, fen 5, egitim 3, iktisadi ve idari bilimler 3, diger birimler 1-2&#x27;ser. 12 arastirma gorevlisi (ales en az 70, 35 yas alti, tezli yuksek lisans/doktora ogrencisi): maliye, ilahiyat 2, kimya, matematik, kimya muh., cevre muh., yazilim muh. 2, hemsirelik, makine muh., su urunleri muh. lisansi. 3 ogretim gorevlisi (ales 70, tezli yuksek lisans): yabanci diller yo (almanca lisansi, almanca 85); rektorluk proje ofisi (biyoloji, molekuler biyoloji ve genetik veya veteriner lisansi); teknik bilimler myo (yazilim, bilgisayar veya adli bilisim muh.). ogretim elemani son basvuru 10 kasim 2026. tam liste resmi ilanda.">
+    <div class="ust"><span class="kurum">Fırat Üniversitesi</span><span class="etiket">2 gün kaldı</span></div>
+    <h2>65 öğretim üyesi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>65</dd></div><div><dt>Görev yeri</dt><dd>Elazığ</dd></div><div><dt>Son başvuru</dt><dd>9 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261026-4-4.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0024" data-bitis="2026-11-09" data-kadro="7" data-eklendi="2026-10-28" data-egitim="akademik" data-tur="Üniversite" data-sehir="ankara" data-ara="ankara haci bayram veli universitesi ankara hbv universitesi 7 ogretim elemani alinacak ankara toplam 7 kadro (ankara haci bayram veli universitesi): 5 arastirma gorevlisi, 2 ogretim gorevlisi. hepsinde ales en az 70; yabanci dil: arastirma gorevlisi ve rektorluk kadrosu icin yds en az 50, cin dili ogretim gorevlisi icin en az 85. basvuru 9 kasim 2026&#x27;ya kadar, ilgili birime sahsen veya posta ile. arastirma gorevlisi (1&#x27;er, ilgili alanda tezli yuksek lisans yapiyor olmak): edebiyat fakultesi: cagdas turk lehceleri ve edebiyatlari (cuvas turk lehceleri; lisans ayni bolum), felsefe (felsefe tarihi; lisans felsefe). finansal bilimler fakultesi: sermaye piyasasi (lisans sermaye piyasasi, finans ve bankacilik, bankacilik ve finans, iktisat veya isletme). hukuk fakultesi: kamu hukuku, milletlerarasi hukuk (lisans hukuk). iktisadi ve idari bilimler: isletme (lisans isletme). ogretim gorevlisi (1&#x27;er, ders verecek): edebiyat fakultesi, cin dili ve edebiyati: cin dili ve edebiyati veya sinoloji lisans ve tezli yuksek lisans mezunu. dil ogretim uygulama ve arastirma merkezi (rektorluk): turkce ogretmenligi lisans, turkce egitimi doktora, yabancilara turkce ogretimi sertifikasi, belgelendirmek kaydiyla en az 10 yil calisma tecrubesi.">
+    <div class="ust"><span class="kurum">Ankara HBV Üniversitesi</span><span class="etiket">2 gün kaldı</span></div>
+    <h2>7 öğretim elemanı alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>7</dd></div><div><dt>Görev yeri</dt><dd>Ankara</dd></div><div><dt>Son başvuru</dt><dd>9 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261026-4-3.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0025" data-bitis="2026-11-09" data-kadro="7" data-eklendi="2026-10-28" data-egitim="akademik" data-tur="Üniversite" data-sehir="" data-ara="turkiye uluslararasi islam, bilim ve teknoloji universitesi tibtu 7 ogretim uyesi alinacak toplam 7 kadro (turkiye uluslararasi islam, bilim ve teknoloji universitesi): 1 profesor, 1 docent, 5 doktor ogretim uyesi. basvuru ilanin resmi gazete&#x27;de yayimindan itibaren 15. gun mesai bitimine kadar yalnizca cevrim ici (ubys); sahsen veya posta ile basvuru kabul edilmez. hepsinde yok&#x27;ce belirlenen yabanci dilde egitim verebilme yeterliligi ve yurt disindaki universitelerde en az iki yariyil bulunmus olmak istenir. islam ilimleri fakultesi: profesor, temel islam bilimleri / tasavvuf (afrika tasavvuf gelenekleri uzerine calisma, ikinci yabanci dilde en az 80 puan); dr. ogr. uyesi, temel islam bilimleri / tefsir (doktora tefsir; kur&#x27;an el yazmalari ve dijital beseri bilimler; ikinci yabanci dilde en az 80 puan); dr. ogr. uyesi, felsefe ve din bilimleri / din egitimi (doktora din egitimi; tubitak vb. destekli proje gorevi). sosyal ve beseri bilimler fakultesi: docent, felsefe / felsefe tarihi (docentlik felsefe); dr. ogr. uyesi, sosyoloji / kurumlar sosyolojisi (lisans, yuksek lisans ve doktora sosyoloji; scopus&#x27;ta en az 1 makale); siyaset bilimi ve uluslararasi iliskiler / karsilastirmali siyaset (doktora siyaset bilimi); tarih / turkiye cumhuriyeti tarihi (doktora tarih; scopus&#x27;ta en az 1 makale).">
+    <div class="ust"><span class="kurum">TİBTÜ</span><span class="etiket">2 gün kaldı</span></div>
+    <h2>7 öğretim üyesi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>7</dd></div><div><dt>Son başvuru</dt><dd>9 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261026-4-6.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0084" data-bitis="2026-11-09" data-kadro="12" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="" data-ara="orman genel mudurlugu orman 12 mufettis yardimciligi giris sinavi alinacak lisans kpss en az 75">
+    <div class="ust"><span class="kurum">Orman</span><span class="etiket">2 gün kaldı</span></div>
+    <h2>12 müfettiş yardımcılığı giriş sınavı alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS en az 75</li></ul>
+    <dl><div><dt>Kadro</dt><dd>12</dd></div><div><dt>Son başvuru</dt><dd>9 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kariyerkapisi.gov.tr/IlanDetay?i=793cd518-1ca4-4e15-90ee-58989b15bd08" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kariyerkapisi.gov.tr</p>
+  </article>
+  <article id="acik-0021" data-bitis="2026-11-10" data-kadro="49" data-eklendi="2026-10-28" data-egitim="akademik" data-tur="Üniversite" data-sehir="mus" data-ara="mus alparslan universitesi mus alparslan universitesi 49 ogretim elemani alinacak mus toplam 49 kadro: ogretim uyesi 47 (3 profesor, 18 docent, 26 dr. ogr. uyesi), ayrica 1 arastirma gorevlisi ve 1 ogretim gorevlisi. ogretim uyesi basvurusu 10 kasim 2026&#x27;ya kadar sahsen (profesor/docent: rektorluk personel daire baskanligi; dr. ogr. uyesi: ilgili dekanlik/mudurluk). dis hekimligi fakultesi (12 dr. ogr. uyesi): agiz dis cene radyolojisi, agiz dis cene cerrahisi, endodonti, ortodonti (2), pedodonti (2), restoratif dis tedavisi (2), periodontoloji (2), protetik dis tedavisi; ayrica temel tip bilimleri (anatomi) 1. egitim fakultesi: 3 docent (rehberlik ve psikolojik danismanlik; sinif egitimi 2). fen-edebiyat: felsefe (turk islam dusunce tarihi) profesor; docent: ortacag tarihi, molekuler biyoloji, eski turk edebiyati, maneviyat psikolojisi. ilahiyat: 4 kadro (arap dili ve belagati 3, kiraat ilmi 1). iktisadi ve idari bilimler: 2 docent (uretim yonetimi ve pazarlama; uluslararasi ticaret). diger: iletisim (gazetecilik) docent; spor bilimleri 2 (rekreasyon profesor, antrenorluk dr.); muhendislik mimarlik 1, uygulamali bilimler 2, saglik bilimleri 3; 11 meslek yuksekokulu kadrosu. arastirma gorevlisi (ilahiyat, islam hukuku) ve ogretim gorevlisi (kiraat ilmi): ales en az 70, sahsen veya posta; arastirma gorevlisi icin 35 yas siniri. tam liste resmi ilanda.">
+    <div class="ust"><span class="kurum">Muş Alparslan Üniversitesi</span><span class="etiket">3 gün kaldı</span></div>
+    <h2>49 öğretim elemanı alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>49</dd></div><div><dt>Görev yeri</dt><dd>Muş</dd></div><div><dt>Son başvuru</dt><dd>10 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261027-4-13.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0020" data-bitis="2026-11-10" data-kadro="52" data-eklendi="2026-10-28" data-egitim="akademik" data-tur="Üniversite" data-sehir="sanliurfa" data-ara="harran universitesi harran universitesi 52 ogretim uyesi alinacak sanliurfa toplam 52 kadro: 10 profesor, 25 docent, 17 doktor ogretim uyesi. basvuru ilanin resmi gazete&#x27;de yayimindan itibaren 15 gun icinde yalnizca cevrim ici (cys.harran.edu.tr); posta ile basvuru kabul edilmez. tip fakultesi (10 kadro, her biri 1): profesor: cocuk sagligi ve hastaliklari, enfeksiyon hastaliklari, gogus hastaliklari, kadin hastaliklari ve dogum. docent: gogus hastaliklari, aile hekimligi, acil tip, kalp ve damar cerrahisi. dr. ogr. uyesi: cocuk sagligi ve hastaliklari, cocuk cerrahisi (tipta uzmanlik). muhendislik fakultesi (6 kadro, lisans: muhendislik fakultesi): profesor: harita muh. (jeodezi). docent: harita muh. (olcme teknigi), yazilim muh., elektrik-elektronik muh. (elektrik makineleri), bilgisayar muh. (bilgisayar yazilimi), endustri muh. (yoneylem arastirma). fen-edebiyat fakultesi (6 kadro): profesor: turk dili ve edebiyati (yeni turk dili), biyoloji (ekoloji). docent: molekuler biyoloji ve genetik (mikrobiyoloji), matematik (uygulamali matematik), cografya (beseri ve iktisadi cografya), tarih (osmanli muesseseleri ve medeniyet tarihi). diger birimler: dis hekimligi (5), eczacilik (4), veteriner (3), turizm (2), egitim, ilahiyat, ziraat ve devlet konservatuvari (1&#x27;er) ile 12 meslek yuksekokulu kadrosu. tam bolum listesi resmi ilanda.">
+    <div class="ust"><span class="kurum">Harran Üniversitesi</span><span class="etiket">3 gün kaldı</span></div>
+    <h2>52 öğretim üyesi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>52</dd></div><div><dt>Görev yeri</dt><dd>Şanlıurfa</dd></div><div><dt>Son başvuru</dt><dd>10 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261027-4-11.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0001" data-bitis="2026-11-11" data-kadro="1" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Üniversite" data-sehir="burdur" data-ara="burdur mehmet akif ersoy universitesi burdur maku 1 sozlesmeli bilisim personeli alinacak burdur lisans kpss p3 puani yoksa 70 sayilir 1 sistem yoneticisi (sozlesmeli bilisim personeli, tam zamanli, aylik brut sozlesme ucret tavaninin 2 katina kadar), burdur mehmet akif ersoy universitesi bilgi islem dairesi baskanligi. aranan ogrenim: dort yillik fakultelerin bilgisayar muhendisligi, yazilim muhendisligi, elektrik muhendisligi, elektronik muhendisligi, elektrik ve elektronik muhendisligi ya da endustri muhendisligi bolumleri (veya yok&#x27;ce denkligi kabul edilen yurt disi karsiliklari). buyuk olcekli bilgi islem merkezlerinde en az 3 yil sistem uzmani/yoneticisi olarak calismis olmak; linux/bsd, windows server, vmware/proxmox, yedekleme, veri tabani, ag ve guvenlik konularinda bilgi ve tecrube; guncel programlama dillerinden en az ikisini belgelemek. puanlama: kpss p3 puaninin %70&#x27;i + ingilizce yds puaninin %30&#x27;u; siralamada ilk 10 kati aday sozlu ve uygulamali sinava cagrilir (30.11.2026), basari icin en az 70 puan. basvuru 28.10.2026 – 11.11.2026 saat 13.00&#x27;e kadar e-devlet uzerinden kariyer kapisi kamu ise alim platformundan; sahsen veya posta ile basvuru kabul edilmez.">
+    <div class="ust"><span class="kurum">Burdur MAKÜ</span></div>
+    <h2>1 sözleşmeli bilişim personeli alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS puanı yoksa 70 sayılır</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Görev yeri</dt><dd>Burdur</dd></div><div><dt>Son başvuru</dt><dd>11 Kasım, saat 13.00</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261028-4-8.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0022" data-bitis="2026-11-13" data-kadro="23" data-eklendi="2026-10-28" data-egitim="akademik" data-tur="Üniversite" data-sehir="giresun" data-ara="giresun universitesi giresun universitesi 23 ogretim uyesi alinacak giresun toplam 23 kadro: 5 profesor, 18 doktor ogretim uyesi (giresun universitesi). son basvuru 13.11.2026, sahsen: profesor icin personel daire baskanligi, dr. ogr. uyesi icin kadronun ilan edildigi fakulte dekanligi/yuksekokul mudurlugu. profesor: docent unvani; dr. ogr. uyesi: doktora. profesor (1&#x27;er): matematik ve fen bilimleri egitimi (fen bilgisi egitimi), biyoloji (botanik), kimya (analitik kimya), tarih (yakincag tarihi), siyaset bilimi ve kamu yonetimi (siyaset ve sosyal bilimler). fen-edebiyat dr. ogr. uyesi: biyoloji (genel biyoloji) 1, turk dili ve edebiyati (cagdas turk lehceleri 2, eski turk edebiyati 1). muhendislik fakultesi: endustri muh. 2 (lisans endustri muhendisligi; endustri muhendisligi ve yoneylem arastirmasi anabilim dallari). ilahiyat: arap dili ve belagati 1. iktisadi ve idari: finans ve bankacilik (gorele uygulamali bilimler yuksekokulu) 1. spor bilimleri: beden egitimi ve spor 1. devlet konservatuvari: yayli calgilar (viyola) 1. meslek yuksekokullari (dr. ogr. uyesi, 1&#x27;er): alucra turan bulutcu (medya ve iletisim), espiye (gida kalite kontrolu ve analizi; ozel guvenlik ve koruma), saglik hizmetleri (tibbi laboratuvar teknikleri), sebinkarahisar (moda tasarimi, elektrik, iklimlendirme ve sogutma, tibbi veri isleme teknikerligi). tam liste resmi ilanda.">
+    <div class="ust"><span class="kurum">Giresun Üniversitesi</span></div>
+    <h2>23 öğretim üyesi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>23</dd></div><div><dt>Görev yeri</dt><dd>Giresun</dd></div><div><dt>Son başvuru</dt><dd>13 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261027-4-12.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0052" data-bitis="2026-11-13" data-kadro="83" data-eklendi="2026-10-31" data-egitim="akademik" data-tur="Üniversite" data-sehir="ankara" data-ara="gazi universitesi gazi universitesi 83 ogretim uyesi alinacak ankara gazi universitesi: 83 ogretim uyesi kadrosu (28 profesor, 22 docent, 33 dr. ogr. uyesi; her biri 1 adet). tip, egitim, fen, muhendislik, teknoloji ve saglik bilimleri gibi fakultelerde. profesor ve docent icin ilgili alanda docentlik unvani, dr. ogr. uyesi icin ilgili alanda doktora; her kadroda calisma konusu ayrica yazilidir. basvuru yalnizca elektronik (personelilan.gazi.edu.tr); sahsen veya posta ile basvuru kabul edilmez. sure resmi gazete&#x27;de yayimdan itibaren 15 gundur, son gun saat 17:00. tam kadro listesi resmi ilanda.">
+    <div class="ust"><span class="kurum">Gazi Üniversitesi</span></div>
+    <h2>83 öğretim üyesi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>83</dd></div><div><dt>Görev yeri</dt><dd>Ankara</dd></div><div><dt>Son başvuru</dt><dd>13 Kasım, saat 17.00</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261030-4-12.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0032" data-bitis="2026-11-13" data-kadro="6" data-eklendi="2026-10-28" data-egitim="onlisans lisans" data-tur="Belediye" data-sehir="istanbul" data-ara="istanbul sile belediye baskanligi sile belediyesi 2 zabita memuru ve 4 tekniker alinacak istanbul (sile) onlisans · lisans zabita p3, tekniker p93; ikisi de en az 65 2 zabita memuru (gih, 9. derece): herhangi bir lisans programindan mezun olmak. kpss p3 en az 65. sinav tarihinde 30 yasini doldurmamis olmak; boy erkeklerde en az 1,67 m, kadinlarda en az 1,60 m. 4 tekniker (th, 10. derece): onlisans (2 yillik meslek yuksekokulu) mezunu olmak; muhendislik diplomasi aranmiyor. kabul edilen programlar: harita, harita kadastro, harita teknikerligi, harita ve maden olcme, harita ve kadastro, insaat, insaat teknikerligi, insaat teknolojisi, makine, elektrik. kpss p93 en az 65. ilanda 4 kadro bolumlere ayrilmamis, toplam olarak verilmis. her aday yalnizca bir kadroya basvurabilir. tekniker basvurusu e-posta, sahsen veya iadeli taahhutlu postayla; zabita basvurusu yalnizca sahsen yapilir.">
+    <div class="ust"><span class="kurum">Şile Belediyesi</span></div>
+    <h2>2 zabıta memuru ve 4 tekniker alınacak</h2>
+    <ul class="chips"><li>Önlisans · Lisans</li><li>KPSS en az 65</li></ul>
+    <dl><div><dt>Kadro</dt><dd>6</dd></div><div><dt>Görev yeri</dt><dd>İstanbul (Şile)</dd></div><div><dt>Son başvuru</dt><dd>13 Kasım</dd></div></dl>
+    <a class="dugme" href="https://sile.bel.tr/uploads/cm/um/cmumll0yx011s4cnpk9zsovyj/cmumll0yx011s4cnpk9zsovyj.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: sile.bel.tr</p>
+  </article>
+  <article id="acik-0006" data-bitis="2026-11-13" data-kadro="1" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="konya|karaman" data-ara="mevlana kalkinma ajansi mevlana kalkinma ajansi 1 uzman personel alinacak konya / karaman lisans kpss en az 80 1 uzman personel, mevlana kalkinma ajansi (merkez konya; konya veya karaman&#x27;da gorevlendirilir). aranan ogrenim: dort yillik insaat muhendisligi lisansi. kpss p1, p2 veya p3&#x27;ten en az 80; son 5 yilda ingilizce yds/e-yds en az 70 (c duzeyi). tercih nedenleri: ajans faaliyet alanlarinda deneyim, tr52 bolgesiyle ilgili calisma, ilgili alanda yuksek lisans/doktora, ikinci yabanci dil, ms office (ozellikle excel), b sinifi ehliyet. basvuru 02/11/2026 – 13/11/2026 saat 23.59, e-devlet kariyer kapisi kamu ise alim; elden, e-posta veya posta kabul edilmez. sinav sozlu; sozluye katilacaklar 20/11/2026&#x27;da ilan edilir.">
+    <div class="ust"><span class="kurum">Mevlana Kalkınma Ajansı</span></div>
+    <h2>1 uzman personel alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS en az 80</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Görev yeri</dt><dd>Konya / Karaman</dd></div><div><dt>Son başvuru</dt><dd>13 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261013-4-11.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0054" data-bitis="2026-11-13" data-kadro="18" data-eklendi="2026-10-31" data-egitim="akademik" data-tur="Üniversite" data-sehir="batman" data-ara="batman universitesi batman universitesi 13 ogretim uyesi, 5 ogretim gorevlisi alinacak batman batman universitesi: 18 kadro: 13 ogretim uyesi (3 profesor, 5 docent, 5 dr. ogr. uyesi) ve 5 ogretim gorevlisi. ogretim uyesi basvurusu ilandan itibaren 15 gun; profesor/docent personel daire baskanligina, dr. ogr. uyesi ilgili birime, sahsen veya posta. profesor: saglik bil. cocuk gelisimi (cocuk gelisimi veya egitim yonetimi docenti), turizm fak. gastronomi ve mutfak sanatlari, fen-edebiyat sosyoloji. docent: muhendislik-mimarlik elektrik-elektronik ve insaat geoteknik; sason myo organik tarim; teknik bil. myo rafineri ve petro-kimya; fen-edebiyat biyoloji. dr. ogr. uyesi (doktora): muhendislik-mimarlik elektrik tesisleri (elektrik-elektronik muh.); saglik bil. ebelik (ebelik veya dogum ve kadin hastaliklari hemsireligi); spor bil. antrenorluk egitimi; sason myo tibbi aromatik bitkiler (bahce bitkileri) ve cocuk gelisimi (cocuk gelisimi veya okul oncesi egitim). ogretim gorevlisi 5 (ales 70, yabanci dil 50): dis hekimligi fak. uygulamali birim 3 (pedodonti, restoratif, protetik; dis hekimligi fakultesi mezunu); teknik bil. myo kuyumculuk ve taki tasarimi (taki/kuyumculuk lisansi + yuksek lisans; yabanci dil aranmaz); teknoloji transfer ofisi (teknoloji, muhendislik veya muhendislik ve mimarlik fakultesi lisansi + yuksek lisans). son basvuru 13 kasim 2026.">
+    <div class="ust"><span class="kurum">Batman Üniversitesi</span></div>
+    <h2>13 öğretim üyesi, 5 öğretim görevlisi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>18</dd></div><div><dt>Görev yeri</dt><dd>Batman</dd></div><div><dt>Son başvuru</dt><dd>13 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261030-4-11.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0055" data-bitis="2026-11-13" data-kadro="4" data-eklendi="2026-10-31" data-egitim="akademik" data-tur="Üniversite" data-sehir="kayseri" data-ara="kayseri universitesi kayseri universitesi 3 ogretim uyesi, 1 ogretim gorevlisi alinacak kayseri kayseri universitesi: 4 kadro (3 dr. ogr. uyesi, 1 ogretim gorevlisi). dr. ogr. uyesi basvurusu sahsen personel daire baskanligina; ogretim gorevlisi basvurusu rektorluk evrak kayit birimine sahsen veya posta (sinav 23 kasim 2026). dr. ogr. uyesi: sosyal bilimler myo mahkeme buro hizmetleri (kamu hukuku doktorasi; hukumet ve baskanlik sistemleri calismalari); tomarza mustafa akincioglu myo yapi denetimi (insaat muh. doktorasi; geopolimer beton ve biyopolimer calismalari) ve harita ve kadastro (harita muh. doktorasi; veri madenciligi ve arazi yonetimi calismalari). ogretim gorevlisi: yahyali myo elektrik enerjisi uretim, iletim ve dagitimi 1 (elektrik veya elektrik-elektronik muh. lisansi ve ayni alanda tezli yuksek lisans; yuksekogretimde en az 2 yil egitim-ogretim tecrubesi; ales en az 70).">
+    <div class="ust"><span class="kurum">Kayseri Üniversitesi</span></div>
+    <h2>3 öğretim üyesi, 1 öğretim görevlisi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>4</dd></div><div><dt>Görev yeri</dt><dd>Kayseri</dd></div><div><dt>Son başvuru</dt><dd>13 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261030-4-9.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0090" data-bitis="2026-11-13" data-kadro="6" data-eklendi="2026-11-06" data-egitim="onlisans lisans" data-tur="Belediye" data-sehir="" data-ara="sile belediye baskanligi sile belediyesi 6 memur alinacak onlisans · lisans kpss en az 65">
+    <div class="ust"><span class="kurum">Şile Belediyesi</span></div>
+    <h2>6 memur alınacak</h2>
+    <ul class="chips"><li>Önlisans · Lisans</li><li>KPSS en az 65</li></ul>
+    <dl><div><dt>Kadro</dt><dd>6</dd></div><div><dt>Son başvuru</dt><dd>13 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0053" data-bitis="2026-11-14" data-kadro="7" data-eklendi="2026-10-31" data-egitim="akademik" data-tur="Üniversite" data-sehir="bitlis" data-ara="bitlis eren universitesi bitlis eren universitesi 7 ogretim uyesi alinacak bitlis bitlis eren universitesi: 7 kadro (1 profesor, 1 docent, 5 dr. ogr. uyesi). yalnizca cevrim ici basvuru (akademikilan.beu.edu.tr), 31 ekim - 14 kasim 2026. profesor: tip fakultesi uroloji (tip fakultesi mezunu, uroloji docenti, wos h-indeksi en az 15). docent: muhendislik-mimarlik fakultesi bilgisayar muhendisligi, bilgisayar bilimleri (bilgisayar bilimleri ve muhendisligi docenti, yapay zeka ve makine ogrenmesi calismalari, wos h-indeksi en az 25). dr. ogr. uyesi (5): tip fakultesi cocuk sagligi ve hastaliklari (tip fakultesi mezunu, cocuk sagligi uzmani); saglik bilimleri fakultesi ebelik (ebelik yuksek lisans ve doktora, sci yayini); saglik hizmetleri myo tibbi laboratuvar teknikleri (kimya yuksek lisans ve doktora, sci yayini, tubitak projesi, wos h-indeksi en az 10); fen-edebiyat fakultesi kimya-biyokimya (sci yayini, tubitak projesi); kanik uygulamali bilimler yo turizm isletmeciligi (turizm isletmeciligi yuksek lisans ve doktora, ssci veya alan indeksli makale).">
+    <div class="ust"><span class="kurum">Bitlis Eren Üniversitesi</span></div>
+    <h2>7 öğretim üyesi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>7</dd></div><div><dt>Görev yeri</dt><dd>Bitlis</dd></div><div><dt>Son başvuru</dt><dd>14 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261031-4-24.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="ilan-0064" data-bitis="2026-11-15" data-kadro="42" data-eklendi="2026-11-05" data-egitim="onlisans lisans" data-tur="Diğer kurumlar" data-sehir="ankara|eskisehir|konya ve diger iller" data-ara="turkiye seker fabrikalari a.s. genel mudurlugu turkseker 42 muhendis ve tekniker alinacak ankara, eskisehir, konya ve diger iller onlisans · lisans kpss p3 (muhendis) ve p93 (on lisans) en az 70 bilgisayar muhendisligi (ve bagli lisans programlari): 2 kisi, ankara, kpss p3 en az 70 elektrik-elektronik muhendisligi: 6 kisi, kpss p3 en az 70 gida muhendisligi: 4 kisi, kpss p3 en az 70 insaat muhendisligi: 1 kisi, ankara, kpss p3 en az 70 kimya muhendisligi: 8 kisi, kpss p3 en az 70 makine muhendisligi: 11 kisi, kpss p3 en az 70 metalurji ve malzeme muhendisligi: 1 kisi, eskisehir, kpss p3 en az 70 ziraat muhendisligi (tarla veya bahce bitkileri): 2 kisi, ankara, kpss p3 en az 70, b sinifi ehliyet ve yabanci dilden en az 50 yapi ressamligi on lisans: 1 kisi, kastamonu, kpss p93 en az 70 makine on lisans: 6 kisi, kpss p93 en az 70 yazili sinav 10 aralik 2026, ankara; basvuru e-devlet ve kariyer kapisi uzerinden">
+    <div class="ust"><span class="kurum">Türkşeker</span></div>
+    <h2>42 mühendis ve tekniker alınacak</h2>
+    <ul class="chips"><li>Önlisans · Lisans</li><li>KPSS en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>42</dd></div><div><dt>Görev yeri</dt><dd>Ankara, Eskişehir, Konya ve diğer iller</dd></div><div><dt>Son başvuru</dt><dd>15 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.turkseker.gov.tr/data/ihaleler/Duyurular_ILAN_2026_11_05_11_43_41_764.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: turkseker.gov.tr</p>
+  </article>
+  <article id="ilan-0010" data-bitis="2026-11-16" data-kadro="15" data-eklendi="2026-10-21" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="ankara" data-ara="yurtdisi turkler ve akraba topluluklar baskanligi ytb 15 uzman yardimcisi alinacak ankara (merkez) lisans ilanda kpss sarti belirtilmemis">
+    <div class="ust"><span class="kurum">YTB</span></div>
+    <h2>15 uzman yardımcısı alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı ilanda belirtilmemiş</li></ul>
+    <dl><div><dt>Kadro</dt><dd>15</dd></div><div><dt>Görev yeri</dt><dd>Ankara (merkez)</dd></div><div><dt>Son başvuru</dt><dd>16 Kasım, saat 18.00</dd></div></dl>
+    <a class="dugme" href="https://www.ytb.gov.tr/haberler/ytb-uzman-yardimcisi-alim-ilani-2026" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: ytb.gov.tr</p>
+  </article>
+  <article id="acik-0063" data-bitis="2026-11-16" data-kadro="30" data-eklendi="2026-11-02" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="ankara ve 18 il" data-ara="jandarma genel komutanligi jandarma genel komutanligi 30 devlet memuru alinacak ankara ve 18 il lisans kpss p3 en az 60 1 avukat (kayseri): hukuk lisansi, avukatlik ruhsati. 3 muhendis (ankara): 2 bilgisayar muhendisligi / bilgisayar bilimi ve muhendisligi, 1 elektrik muhendisligi lisansi. 2 istatistikci (ankara): istatistik ve istatistikle birlesik 13 lisans programindan biri. 2 kimyager (ankara, van): kimya, kimyager, uygulamali kimya, kimya muhendisligi vb. lisans. 4 psikolog (karabuk/safranbolu, kastamonu, mardin, mugla): psikoloji ya da davranis bilimleri-psikoloji lisansi. 18 uzman, hepsi lisans: 1 gorsel-isitsel (ankara; sinema-televizyon bolumleri, tercihen kameramanlik deneyimi), 1 iletisim/metin (ankara; yeni medya, gazetecilik, halkla iliskiler, turk dili ve edebiyati, siyaset bilimi, uluslararasi iliskiler, sosyoloji, felsefe vb.), 12 hukuk (ankara 4; aksaray, artvin, erzincan, gumushane, kirklareli, mus, ordu, yozgat), 4 iktisat/maliye/isletme/muhasebe (cankiri, isparta, kirikkale, nevsehir). ortak: kpss p3 (2025-2026) en az 60; 18 yasini doldurmus olmak; kadin ve erkek. tek unvana basvurulur.">
+    <div class="ust"><span class="kurum">Jandarma Genel Komutanlığı</span></div>
+    <h2>30 devlet memuru alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>30</dd></div><div><dt>Görev yeri</dt><dd>Ankara ve 18 il</dd></div><div><dt>Son başvuru</dt><dd>16 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.jandarma.gov.tr/2026-yili-aciktan-devlet-memuru-temini" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: jandarma.gov.tr</p>
+  </article>
+  <article id="acik-0097" data-bitis="2026-11-16" data-kadro="162" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="" data-ara="kultur ve turizm bakanligi kultur ve turizm bakanligi 162 sozlesmeli kutuphaneci alinacak lisans kpss p3 en az 70">
+    <div class="ust"><span class="kurum">Kültür ve Turizm Bakanlığı</span></div>
+    <h2>162 sözleşmeli kütüphaneci alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>162</dd></div><div><dt>Son başvuru</dt><dd>16 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kariyerkapisi.gov.tr/IlanDetay?i=a9f4af35-682a-4030-b699-68d7e4ad1546" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kariyerkapisi.gov.tr</p>
+  </article>
+  <article id="acik-0059" data-bitis="2026-11-16" data-kadro="5" data-eklendi="2026-11-02" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="ankara" data-ara="yuksekogretim kurulu baskanligi yok 5 sozlesmeli bilisim personeli alinacak ankara lisans kpss p3 puani esas alinir (belge yoksa 70 sayilir) 2 kidemli yazilim gelistirme uzmani (java), ucret tavaninin 4 katina kadar: bilgisayar veya yazilim muhendisligi (ya da denkligi kabul edilen bolum) mezunu; lisans sonrasi en az 8 yil yazilim gelistirici deneyimi (belgeli); java ve spring boot ile fiilen calismis olmak. 3 yazilim gelistirme uzmani (java), ucret tavaninin 2 katina kadar: bilgisayar veya yazilim muhendisligi mezunu; lisans sonrasi en az 3 yil yazilim gelistirici deneyimi (belgeli); java ve spring boot ile fiilen calismis olmak. genel: 657 sayili kanun&#x27;un 48. maddesindeki sartlar; erkek adaylarda askerlikle iliskisi olmamak. adaylar kpss p3 sonuc belgesi (yoksa 70 puan) ve ingilizce yds/e-yds belgesi (yoksa 0 puan) ile degerlendirilir; sozlu sinava cagrilacaklar yok.gov.tr&#x27;de duyurulur. basvuru: 2-16 kasim 2026, e-devlet uzerinden kariyer kapisi kamu ise alim; posta ve sahsen basvuru kabul edilmez.">
+    <div class="ust"><span class="kurum">YÖK</span></div>
+    <h2>5 sözleşmeli bilişim personeli alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>5</dd></div><div><dt>Görev yeri</dt><dd>Ankara</dd></div><div><dt>Son başvuru</dt><dd>16 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261102-4-1.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0066" data-bitis="2026-11-16" data-kadro="19" data-eklendi="2026-11-03" data-egitim="akademik" data-tur="Üniversite" data-sehir="izmir" data-ara="izmir katip celebi universitesi izmir katip celebi universitesi 19 ogretim uyesi alinacak izmir kpss sarti yok (ogretim uyesi ilani) izmir katip celebi universitesi: 19 kadro (8 profesor, 5 docent, 6 dr. ogr. uyesi), her kadro 1 adet. yalniz bir kadroya basvurulur. profesor (8): iktisat politikasi* (mikro iktisat docenti); hastane isletmeciligi (yonetim ve organizasyon docenti); uretim yonetimi ve pazarlama (pazarlama docenti); muhasebe ve finansman 2 (muhasebe, finans docenti); mantik (felsefe ve din bilimleri docenti); temel sanat egitimi (guzel sanatlar egitimi docenti); gorsel iletisim tasarimi. docent (5): endodonti; protetik dis tedavisi; gemi makineleri isletme muhendisligi (gemi insaati ve gemi makineleri muh. doktorali); orman insaati, jeodezi ve fotogrametri (orman muhendisligi docenti); turk islam arkeolojisi. dr. ogr. uyesi (6): restoratif dis tedavisi; protetik dis tedavisi; bilgisayar yazilimi* (bilgisayar muh. lisans, yuksek lisans, doktora); geleneksel turk sanatlari; ingiliz dili ve edebiyati*; yeni turk dili. *isaretli kadrolara ingilizce ders verme yeterliligi belgeleyenler basvurabilir.">
+    <div class="ust"><span class="kurum">İzmir Kâtip Çelebi Üniversitesi</span></div>
+    <h2>19 öğretim üyesi alınacak</h2>
+    <ul class="chips"><li>KPSS şartı yok</li></ul>
+    <dl><div><dt>Kadro</dt><dd>19</dd></div><div><dt>Görev yeri</dt><dd>İzmir</dd></div><div><dt>Son başvuru</dt><dd>16 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261102-4-7.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0067" data-bitis="2026-11-16" data-kadro="10" data-eklendi="2026-11-03" data-egitim="akademik" data-tur="Üniversite" data-sehir="izmir" data-ara="izmir demokrasi universitesi izmir demokrasi universitesi 7 ogretim uyesi, 3 ogretim elemani alinacak izmir ogretim uyesi icin kpss yok; arastirma/ogretim gorevlisi icin ales 70 a2026/3 ogretim uyesi (7): 1 profesor (iktisat politikasi, makro iktisat docenti); 6 dr. ogr. uyesi: gorme engelliler egitimi (ozel egitim doktorasi), grafik tasarimi (grafik alaninda sanatta yeterlik), idare hukuku (hukuk fakultesi mezunu, kamu hukuku doktorali, ingilizce yeterlik), avrupa birligi hukuku (ozel hukuk tezli yuksek lisans ve doktora), elektrik-elektronik muhendisligi (ingilizce yeterlik), termodinamik (makine muhendisligi lisans ve doktora, ingilizce yeterlik). oe2026/2 (3): 1 arastirma gorevlisi, endustri muhendisligi / yoneylem arastirmasi (endustri muh. lisans, tezli yuksek lisans yapiyor olmak; ales 70, yabanci dil 85); 2 ogretim gorevlisi: bilgi islem daire baskanligi (bilgisayar muh. lisans, tezli yuksek lisans; ales 70, dil 65) ve is sagligi ve guvenligi koordinatorlugu (fen, muhendislik, mimarlik veya isg alaninda tezli yuksek lisans, a veya b sinifi is guvenligi uzmanligi belgesi; ales 70, dil 65).">
+    <div class="ust"><span class="kurum">İzmir Demokrasi Üniversitesi</span></div>
+    <h2>7 öğretim üyesi, 3 öğretim elemanı alınacak</h2>
+    <ul class="chips"><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>10</dd></div><div><dt>Görev yeri</dt><dd>İzmir</dd></div><div><dt>Son başvuru</dt><dd>16 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261102-4-8.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0099" data-bitis="2026-11-16" data-kadro="8" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Üniversite" data-sehir="" data-ara="aydin adnan menderes universitesi aydin adnan menderes univ. 8 tarim iscisi alinacak lisans">
+    <div class="ust"><span class="kurum">Aydın Adnan Menderes Üniv.</span></div>
+    <h2>8 tarım işçisi alınacak</h2>
+    <ul class="chips"><li>Lisans</li></ul>
+    <dl><div><dt>Kadro</dt><dd>8</dd></div><div><dt>Son başvuru</dt><dd>16 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0102" data-bitis="2026-11-16" data-kadro="5" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="" data-ara="yuksekogretim kurulu baskanligi (yok) yuksekogretim kurulu baskanligi 5 sozlesmeli bilisim personeli alinacak lisans kpss p3 puan siralamasi">
+    <div class="ust"><span class="kurum">Yükseköğretim Kurulu Başkanlığı</span></div>
+    <h2>5 sözleşmeli bilişim personeli alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>5</dd></div><div><dt>Son başvuru</dt><dd>16 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kariyerkapisi.gov.tr/IlanDetay?i=01e546b7-c1d0-4364-b010-7eea088f49cd" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kariyerkapisi.gov.tr</p>
+  </article>
+  <article id="acik-0103" data-bitis="2026-11-16" data-kadro="15" data-eklendi="2026-11-06" data-egitim="lise lisans" data-tur="Diğer kurumlar" data-sehir="" data-ara="yurtdisi turkler ve akraba topluluklar baskanligi yurtdisi turkler ve akraba topluluklar 15 ytb uzman yardimcisi alim ilani 2026 alinacak lise · lisans">
+    <div class="ust"><span class="kurum">Yurtdışı Türkler ve Akraba Topluluklar</span></div>
+    <h2>15 ytb uzman yardımcısı alım ilanı 2026 alınacak</h2>
+    <ul class="chips"><li>Lise · Lisans</li></ul>
+    <dl><div><dt>Kadro</dt><dd>15</dd></div><div><dt>Son başvuru</dt><dd>16 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kariyerkapisi.gov.tr/IlanDetay?i=d419889e-c536-4404-b91f-b319b84f1fa9" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kariyerkapisi.gov.tr</p>
+  </article>
+  <article id="acik-0144" data-bitis="2026-11-17" data-kadro="38" data-eklendi="2026-11-07" data-egitim="lise onlisans lisans" data-tur="Diğer kurumlar" data-sehir="" data-ara="cumhurbaskanligi milli saraylar idaresi baskanligi cumhurbaskanligi milli saraylar idaresi 38 sozlesmeli personel alinmasina iliskin sinav alinacak lise · onlisans · lisans kpss p93 en az 60">
+    <div class="ust"><span class="kurum">Cumhurbaşkanlığı Milli Saraylar İdaresi</span></div>
+    <h2>38 sözleşmeli personel alınmasına ilişkin sınav alınacak</h2>
+    <ul class="chips"><li>Lise · Önlisans · Lisans</li><li>KPSS P93 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>38</dd></div><div><dt>Son başvuru</dt><dd>17 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261107-4-1.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0068" data-bitis="2026-11-17" data-kadro="78" data-eklendi="2026-11-03" data-egitim="akademik" data-tur="Üniversite" data-sehir="gaziantep" data-ara="gaziantep universitesi gaziantep universitesi 78 ogretim uyesi alinacak gaziantep kpss sarti yok (ogretim uyesi ilani) gaziantep universitesi: 78 kadro (17 profesor, 21 docent, 40 dr. ogr. uyesi). yalniz bir kadroya basvurulur; birden fazlasina basvuru gecersiz sayilir. birimler: dis hekimligi, fen edebiyat, gaziantep egitim, hukuk, iktisadi ve idari bilimler, ilahiyat, mimarlik, muhendislik, nizip egitim, saglik bilimleri, tip ve turizm fakulteleri; islahiye, naci topcuoglu, nizip, oguzeli, saglik hizmetleri ve sosyal bilimler meslek yuksekokullari; turk musikisi devlet konservatuvari. anabilim dali ve sartlarin tam listesi resmi ilan pdf&#x27;inde.">
+    <div class="ust"><span class="kurum">Gaziantep Üniversitesi</span></div>
+    <h2>78 öğretim üyesi alınacak</h2>
+    <ul class="chips"><li>KPSS şartı yok</li></ul>
+    <dl><div><dt>Kadro</dt><dd>78</dd></div><div><dt>Görev yeri</dt><dd>Gaziantep</dd></div><div><dt>Son başvuru</dt><dd>17 Kasım, saat 17.00</dd></div></dl>
+    <a class="dugme" href="https://www.gantep.edu.tr/duyuru_detay.php?duyuru_ID=51612" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: gantep.edu.tr</p>
+  </article>
+  <article id="acik-0149" data-bitis="2026-11-17" data-kadro="38" data-eklendi="2026-11-07" data-egitim="lise onlisans lisans" data-tur="Diğer kurumlar" data-sehir="" data-ara="milli saraylar idaresi baskanligi milli saraylar idaresi 38 sozlesmeli personel alinmasina iliskin sinav alinacak lise · onlisans · lisans kpss p93 en az 60">
+    <div class="ust"><span class="kurum">Milli Saraylar İdaresi</span></div>
+    <h2>38 sözleşmeli personel alınmasına ilişkin sınav alınacak</h2>
+    <ul class="chips"><li>Lise · Önlisans · Lisans</li><li>KPSS P93 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>38</dd></div><div><dt>Son başvuru</dt><dd>17 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kariyerkapisi.gov.tr/IlanDetay?i=877cfe70-3bd5-4c0f-93e4-64da34f001f5" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kariyerkapisi.gov.tr</p>
+  </article>
+  <article id="acik-0064" data-bitis="2026-11-19" data-kadro="68" data-eklendi="2026-11-03" data-egitim="lisans" data-tur="Üniversite" data-sehir="izmir" data-ara="dokuz eylul universitesi dokuz eylul universitesi 68 hemsire alinacak izmir lisans 2026 kpss p3 (sinav ve mulakat yok, puan siralamasi) hemsire (68), 657 sayili kanun 4/b sozlesmeli, uygulama ve arastirma hastanesi: hemsirelik lisans mezunu; son basvuru tarihinde on lisans/lisans programlarinda orgun ogrenci olmamak; 2026 kpss p3 puani; son basvuru tarihinde 35 yasini doldurmamis olmak. vardiyali ve nobet usulu (gece dahil) calismaya engeli olmamak; sgk&#x27;dan emeklilik veya yaslilik ayligi almamak. atamadan once arsiv arastirmasi yapilir.">
+    <div class="ust"><span class="kurum">Dokuz Eylül Üniversitesi</span></div>
+    <h2>68 hemşire alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>68</dd></div><div><dt>Görev yeri</dt><dd>İzmir</dd></div><div><dt>Son başvuru</dt><dd>19 Kasım, saat 13.00</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261103-4-11.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0030" data-bitis="2026-11-19" data-kadro="2" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Belediye" data-sehir="edirne" data-ara="edirne kesan belediye baskanligi kesan belediyesi 2 muhendis (memur) alinacak edirne (kesan) lisans kpss p3 en az 70 2 muhendis (th sinifi, 8. derece, memur; ilk defa aciktan atama), kesan belediye baskanligi, edirne; kadin ve erkek adaylar basvurabilir. ikisinde de 2026 kpss (b grubu) p3 puan turunden en az 70. muhendis (1): lisans duzeyinde fakultelerin insaat muhendisligi programi. muhendis (1): lisans duzeyinde fakultelerin elektrik-elektronik muhendisligi programi. basvuru 16/11/2026 – 19/11/2026: insankaynaklari@kesan.bel.tr adresine e-posta ile ya da belediyeye (mesai gunlerinde 08.00-17.00) sahsen/posta ile. sinav sozludur.">
+    <div class="ust"><span class="kurum">Keşan Belediyesi</span></div>
+    <h2>2 mühendis (memur) alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>2</dd></div><div><dt>Görev yeri</dt><dd>Edirne (Keşan)</dd></div><div><dt>Son başvuru</dt><dd>19 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261014-4-9.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0108" data-bitis="2026-11-19" data-kadro="2" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Belediye" data-sehir="" data-ara="kesan belediye baskanligi kesan belediyesi 2 memur alinacak lisans kpss p3 puan siralamasi">
+    <div class="ust"><span class="kurum">Keşan Belediyesi</span></div>
+    <h2>2 memur alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>2</dd></div><div><dt>Son başvuru</dt><dd>19 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="ilan-0069" data-bitis="2026-11-20" data-kadro="10" data-eklendi="2026-11-06" data-egitim="onlisans lisans" data-tur="Üniversite" data-sehir="istanbul" data-ara="marmara universitesi rektorlugu marmara universitesi 10 sozlesmeli muhendis ve tekniker alinacak istanbul onlisans · lisans 2026 kpss p3 / p93 puan siralamasi 4 bilgisayar teknikeri (onlisans: bilgisayar programciligi, web teknolojileri, bilgisayar bilimleri, yazilim gelistirme programlari) — 2026 kpss p93. 3 elektrik teknikeri (onlisans: elektrik veya elektrik teknolojisi programlari) — 2026 kpss p93. 2 muhendis (lisans: elektrik, elektrik ve elektronik, elektrik-elektronik muhendisligi) ve 1 muhendis (lisans: insaat muhendisligi) — 2026 kpss p3. ortak sart: 30 yasini doldurmamis olmak, orgun lisans ogrencisi olmamak. basvuru: 06.11.2026–20.11.2026 (13:00) kariyer kapisi + goztepe yerleskesine sahsen (elden) belge teslimi zorunlu (posta gecersiz).">
+    <div class="ust"><span class="kurum">Marmara Üniversitesi</span></div>
+    <h2>10 sözleşmeli mühendis ve tekniker alınacak</h2>
+    <ul class="chips"><li>Önlisans · Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>10</dd></div><div><dt>Görev yeri</dt><dd>İstanbul</dd></div><div><dt>Son başvuru</dt><dd>20 Kasım, saat 13.00</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261106-4-8.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr (20261106-4-8)</p>
+  </article>
+  <article id="ilan-0040" data-bitis="2026-11-20" data-kadro="25" data-eklendi="2026-10-30" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="ankara" data-ara="kamu ihale kurumu kamu ihale kurumu 25 uzman yardimcisi alinacak ankara lisans kpss a grubu, en az 70">
+    <div class="ust"><span class="kurum">Kamu İhale Kurumu</span></div>
+    <h2>25 uzman yardımcısı alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>25</dd></div><div><dt>Görev yeri</dt><dd>Ankara</dd></div><div><dt>Son başvuru</dt><dd>20 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261030-4-4.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0029" data-bitis="2026-11-20" data-kadro="1" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Belediye" data-sehir="isparta" data-ara="isparta sariidris belediye baskanligi sariidris belediyesi 1 zabita memuru alinacak isparta (sariidris) lisans kpss p3 en az 70 1 zabita memuru (g.i.h., 10. derece, memur; ilk defa aciktan atama), sariidris belediye baskanligi, egirdir/isparta; kadin ve erkek adaylar basvurabilir. aranan ogrenim (resmi ilandaki gibi): lisans duzeyinde fakultelerin bankacilik ve finans, finans matematigi veya finansal ekonometri programlarindan biri. en az b sinifi surucu belgesi. kpss: 2026 kpss (b grubu) p3 puan turunden en az 70. ozel sartlar: sinav tarihinde 30 yasini doldurmamis olmak; boy erkekte en az 1,67 m, kadinda en az 1,60 m; boyun 1 metreden fazla kismi ile kilo arasinda (+/-) 10 kg&#x27;dan fazla fark olmamasi. basvuru 18/11/2026 – 20/11/2026, mesai gunlerinde 10.00-16.00, hurriyet mah. vatan cad. no:37 sariidris/egirdir, yazi isleri mudurlugune yalnizca sahsen. sinav sozlu ve uygulamalidir.">
+    <div class="ust"><span class="kurum">Sarıidris Belediyesi</span></div>
+    <h2>1 zabıta memuru alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Görev yeri</dt><dd>Isparta (Sarıidris)</dd></div><div><dt>Son başvuru</dt><dd>20 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261013-4-9.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0049" data-bitis="2026-11-20" data-kadro="25" data-eklendi="2026-10-30" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="ankara" data-ara="kamu ihale kurumu kamu ihale kurumu 25 kamu ihale uzman yardimcisi alinacak ankara lisans kpss a grubu, en az 70 (gruba gore p1, p2, p4, p18, p23, p28, p33) kamu ihale kurumu: 25 kamu ihale uzman yardimcisi (a grubu), giris sinavi yazili (19 aralik 2026, ankara) ve sozlu. basvuru 9-20 kasim 2026, yalnizca kariyer kapisi/e-devlet uzerinden; sahsen veya posta kabul edilmez. 1. grup, 7 kadro: hukuk fakultesi mezunu, kpss p4. 2. grup, 6 kadro: iktisat, siyasal bilgiler, isletme veya iktisadi ve idari bilimler fakultesi mezunu, kpss p18, p23, p28 veya p33. 3. grup, 12 kadro: insaat muhendisligi 10, makine muhendisligi 2; kpss p1 veya p2. ortak sartlar: en az 4 yillik egitim veren fakulte mezunu; 2025 veya 2026 kpss&#x27;de ilgili puan turlerinden en az 70; 1 ocak 1991 ve sonrasinda dogmus olmak (35 yasini doldurmamis); yazili sinava kadro sayisinin 20 kati aday cagrilir.">
+    <div class="ust"><span class="kurum">Kamu İhale Kurumu</span></div>
+    <h2>25 kamu ihale uzman yardımcısı alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>25</dd></div><div><dt>Görev yeri</dt><dd>Ankara</dd></div><div><dt>Son başvuru</dt><dd>20 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261030-4-4.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0145" data-bitis="2026-11-20" data-kadro="2" data-eklendi="2026-11-07" data-egitim="lisans yukseklisans" data-tur="Üniversite" data-sehir="" data-ara="gumushane universitesi gumushane univ. 2 nden duzeltme alinacak lisans · yuksek lisans">
+    <div class="ust"><span class="kurum">Gümüşhane Üniv.</span></div>
+    <h2>2 nden düzeltme alınacak</h2>
+    <ul class="chips"><li>Lisans · Yüksek lisans</li></ul>
+    <dl><div><dt>Kadro</dt><dd>2</dd></div><div><dt>Son başvuru</dt><dd>20 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0146" data-bitis="2026-11-20" data-kadro="2" data-eklendi="2026-11-07" data-egitim="lise onlisans lisans" data-tur="Üniversite" data-sehir="" data-ara="izmir demokrasi universitesi izmir demokrasi univ. 2 sozlesmeli personel alinacak lise · onlisans · lisans kpss en az 75">
+    <div class="ust"><span class="kurum">İzmir Demokrasi Üniv.</span></div>
+    <h2>2 sözleşmeli personel alınacak</h2>
+    <ul class="chips"><li>Lise · Önlisans · Lisans</li><li>KPSS en az 75</li></ul>
+    <dl><div><dt>Kadro</dt><dd>2</dd></div><div><dt>Son başvuru</dt><dd>20 Kasım</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="ilan-0068" data-bitis="2026-11-22" data-kadro="100" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="tasra teskilati" data-ara="t.c. sosyal guvenlik kurumu baskanligi sosyal guvenlik kurumu (sgk) 100 sosyal guvenlik denetmen yardimcisi alinacak tasra teskilati (81 il) lisans kpss en az 70 (p39, p40, p41, p42, p43 veya p48) 100 sosyal guvenlik denetmen yardimcisi (genel idare hizmetleri sinifi, tasra teskilati kadrolu memur). ogrenim sarti: en az 4 yillik egitim veren yuksekogretim kurumlarinin hukuk, siyasal bilgiler, iktisat, isletme, iktisadi ve idari bilimler fakulteleri veya sosyal hizmetler bolumlerinden mezun olmak. kpss sarti: 2025 veya 2026 kpss p39, p40, p41, p42, p43 veya p48 puan turunden en az 70 puan; kontenjanin 4 kati (400 aday) sozlu sinava cagrilir. yas sarti: 1 ocak 2026 itibariyla 35 yasini doldurmamis olmak. basvuru: 09.11.2026 – 22.11.2026 (23:59) yalnizca e-devlet / kariyer kapisi uzerinden online (sahsen veya posta kabul edilmez).">
+    <div class="ust"><span class="kurum">Sosyal Güvenlik Kurumu (SGK)</span></div>
+    <h2>100 sosyal güvenlik denetmen yardımcısı alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>100</dd></div><div><dt>Görev yeri</dt><dd>Taşra Teşkilatı (81 İl)</dd></div><div><dt>Son başvuru</dt><dd>22 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261106-4-9.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr (20261106-4-9)</p>
+  </article>
+  <article id="acik-0005" data-bitis="2026-11-22" data-kadro="5" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="samsun" data-ara="orta karadeniz kalkinma ajansi orta karadeniz kalkinma ajansi 4 uzman ve 1 destek personeli alinacak samsun lisans uzman icin kpss en az 80, destek personeli icin en az 70 4 uzman personel ve 1 destek personeli (buro gorevlisi), orta karadeniz kalkinma ajansi (samsun merkezli; amasya, corum, tokat&#x27;ta gorev). basvuru 02/11/2026 – 22/11/2026 saat 23.59, e-devlet kariyer kapisi kamu ise alim. uzman (1): sehir ve bolge planlama veya mimarlik lisansi; kpss p1, p2 veya p3&#x27;ten en az 80 ya da en az 5 yil is tecrubesi (50 yasini doldurmamis olmak). uzman (1): bilgisayar, cevre, elektrik-elektronik, endustri, endustriyel tasarim, gida, isletme, mekatronik, metalurji ve malzeme, kontrol ve otomasyon, tekstil, yapay zeka ve veri muhendisligi ile yonetim bilisim sistemleri lisansi; kpss p1, p2 veya p3&#x27;ten en az 80 ya da en az 5 yil is tecrubesi. uzman (2): calisma ekonomisi ve endustri iliskileri, ekonomi, ekonometri, ekonomi ve finans, iktisat, isletme, kamu yonetimi, uluslararasi ticaret ve isletmecilik, siyaset bilimi ve kamu yonetimi, siyaset bilimi ve uluslararasi iliskiler, veri bilimi ve analitigi lisansi; kpss p12, p13, p14, p15, p19, p20, p24, p25, p34, p36 veya p48&#x27;den en az 80. uzmanlar icin son 5 yilda ingilizce yds c duzeyi sarti. destek personeli (1): ekonomi, iktisat, isletme, maliye, kamu yonetimi, siyaset bilimi ve kamu yonetimi, uluslararasi ticaret ve isletmecilik veya yonetim bilisim sistemleri lisansi; kpss p1, p2 veya p3&#x27;ten en az 70.">
+    <div class="ust"><span class="kurum">Orta Karadeniz Kalkınma Ajansı</span></div>
+    <h2>4 uzman ve 1 destek personeli alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>5</dd></div><div><dt>Görev yeri</dt><dd>Samsun</dd></div><div><dt>Son başvuru</dt><dd>22 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261013-4-13.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0007" data-bitis="2026-11-22" data-kadro="5" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="istanbul" data-ara="istanbul kalkinma ajansi istanbul kalkinma ajansi 5 uzman alinacak istanbul lisans kpss en az 80 5 uzman, istanbul kalkinma ajansi (istanbul, beyoglu). basvuru 02/11/2026 – 22/11/2026 saat 23.59, yalnizca cevrim ici (kariyerkapisi.gov.tr/isealim). sinav sozlu (mulakat); katilacaklar 04/12/2026&#x27;da ilan edilir. hepsi icin son 5 yilda ingilizce yds/e-yds en az c duzeyi aranir. uzman (2, kpss ile): bilgisayar, cevre, elektrik-elektronik, elektronik ve haberlesme, endustri, isletme, makine, matematik, metalurji, metalurji ve malzeme muhendisligi; matematik, sehir ve bolge planlama, yonetim bilisim sistemleri lisansi; kpss p1, p2 veya p3&#x27;ten en az 80. uzman (2, kpss ile): iktisat, isletme veya maliye lisansi; kpss p14, p15, p19, p20, p21, p24 veya p25&#x27;ten en az 80. uzman (1, kpss aranmaksizin is tecrubesiyle): yukaridaki muhendislik ve ilgili bolumlerden lisans, 50 yasini doldurmamis olmak ve kamuda ya da ozel sektorde planlama-programlama, proje yonetimi, strateji, izleme-degerlendirme, tanitim-danismanlik, sehircilik-cevre, ar-ge, bilgi ve iletisim teknolojileri, finansman, insan kaynaklari, uluslararasi ticaret veya hukuk alanlarinda en az 5 yil calismis olmak.">
+    <div class="ust"><span class="kurum">İstanbul Kalkınma Ajansı</span></div>
+    <h2>5 uzman alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS en az 80</li></ul>
+    <dl><div><dt>Kadro</dt><dd>5</dd></div><div><dt>Görev yeri</dt><dd>İstanbul</dd></div><div><dt>Son başvuru</dt><dd>22 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261012-4-4.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0051" data-bitis="2026-11-23" data-kadro="8" data-eklendi="2026-10-30" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="ankara" data-ara="nukleer duzenleme kurumu nukleer duzenleme kurumu 8 sozlesmeli bilisim personeli alinacak ankara lisans kpss p3 puani yoksa 70 sayilir nukleer duzenleme kurumu, strateji gelistirme dairesi baskanligi bilgi teknolojileri grup baskanligi: 8 sozlesmeli bilisim personeli, tam zamanli, her pozisyon 1 kisi. basvuru 9 kasim 2026 14.00 - 23 kasim 2026 23.59, yalnizca kariyer kapisi (e-devlet); sozlu/uygulamali sinav 7-11 aralik 2026, ankara. yalniz bir pozisyona basvurulabilir. pozisyonlar ve belgelenmesi gereken mesleki deneyim: yazilim mimari 8 yil; kidemli veri tabani uzmani, kidemli yazilim uzmani 5 yil; kidemli siber guvenlik uzmani 5 yil (ceh, oscp, cissp gibi sertifikalardan en az biri); sistem uzmani, ag uzmani, yazilim uzmani, proje yoneticisi 3 yil. yazilim kadrolarinda .net/c#, angular, postgresql deneyimi aranir. ogrenim: dort yillik bilgisayar, yazilim, elektrik, elektronik, elektrik-elektronik veya endustri muhendisligi; ucret tavani 2 kati olan pozisyonlarda diger muhendislik, bilgisayar/teknoloji bolumleri, istatistik, matematik ve fizik mezunlari da basvurabilir. guncel programlama dillerinden en az ikisini bildigini belgelemek gerekir. kpss p3 (2025 veya 2026) ve ingilizce yds/e-yds puani esas alinir; kpss p3 yoksa 70, yabanci dil belgesi yoksa 0 sayilir.">
+    <div class="ust"><span class="kurum">Nükleer Düzenleme Kurumu</span></div>
+    <h2>8 sözleşmeli bilişim personeli alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS puanı yoksa 70 sayılır</li></ul>
+    <dl><div><dt>Kadro</dt><dd>8</dd></div><div><dt>Görev yeri</dt><dd>Ankara</dd></div><div><dt>Son başvuru</dt><dd>23 Kasım, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.ndk.org.tr/duyurular" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: ndk.org.tr</p>
+  </article>
+  <article id="acik-0056" data-bitis="2026-11-25" data-kadro="1" data-eklendi="2026-10-31" data-egitim="akademik" data-tur="Üniversite" data-sehir="istanbul" data-ara="bogazici universitesi bogazici universitesi 1 ogretim gorevlisi alinacak istanbul bogazici universitesi yabanci diller yuksekokulu: 1 ogretim gorevlisi (ders vermekle gorevli, 5. derece). almanca ogretmenligi, alman dili ve edebiyati veya almanca mutercim ve tercumanlik programlarindan birinden lisans ve en az tezli yuksek lisans derecesi; ales en az 70, yds en az 93 veya esdegeri. basvuru 30 ekim - 25 kasim 2026, yabanci diller yuksekokulu mudurlugune sahsen veya posta; sozlu sinav 1 aralik, yazili sinav 3 aralik 2026.">
+    <div class="ust"><span class="kurum">Boğaziçi Üniversitesi</span></div>
+    <h2>1 öğretim görevlisi alınacak</h2>
+    <ul class="chips"></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Görev yeri</dt><dd>İstanbul</dd></div><div><dt>Son başvuru</dt><dd>25 Kasım</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261030-4-10.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0060" data-bitis="2026-12-01" data-kadro="2" data-eklendi="2026-11-02" data-egitim="lisans" data-tur="Üniversite" data-sehir="istanbul" data-ara="yildiz teknik universitesi yildiz teknik universitesi 2 sozlesmeli bilisim personeli alinacak istanbul lisans kpss p3 puani esas alinir (belge yoksa 70 sayilir) 1 bilgi guvenligi uzmani (ucret tavaninin 2 katina kadar): kritik veri tutan kamu kurumlarinda ya da buyuk ozel sistem merkezlerinde bilgi guvenligi uzmani, sistem/ag yoneticisi veya yazilim gelistirici olarak en az 3 yil deneyim (belgeli); bilgi guvenligi, siem, guvenlik duvari, ids/ips, sizma testi bilgisi. 1 network uzmani (ucret tavaninin 2 katina kadar): buyuk olcekli kamu bilgi islem birimlerinde ya da buyuk ozel sistem merkezlerinde ag uzmani olarak en az 3 yil deneyim (belgeli); lan/wan/wlan/vpn, cisco-huawei-extreme anahtar ve palo alto guvenlik duvari, unix/linux bilgisi. genel: bilgisayar, yazilim, elektrik, elektronik, elektrik-elektronik veya endustri muhendisligi (4 yillik) ya da diger muhendislik, fen-edebiyat/egitim fakultelerinin bilgisayar-teknoloji bolumleri, istatistik, matematik, fizik mezunu (2 kat ucrete kadar pozisyonlarda); en az iki guncel programlama dili. kpss p3 (yoksa 70) ve yds puani degerlendirilir. basvuru: ilandan itibaren 30 gun, e-devlet kariyer kapisi kamu ise alim; sahsen veya posta basvurusu alinmaz.">
+    <div class="ust"><span class="kurum">Yıldız Teknik Üniversitesi</span></div>
+    <h2>2 sözleşmeli bilişim personeli alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>2</dd></div><div><dt>Görev yeri</dt><dd>İstanbul</dd></div><div><dt>Son başvuru</dt><dd>1 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261102-4-6.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0018" data-bitis="2026-12-02" data-kadro="6" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Belediye" data-sehir="izmir" data-ara="izmir karsiyaka belediye baskanligi karsiyaka belediyesi 6 bilgisayar isletmeni alinacak izmir (karsiyaka) lisans kpss p3 en az 70 6 bilgisayar isletmeni (g.i.h., memur), karsiyaka belediye baskanligi, izmir: 3 kadro 7. derece, 3 kadro 8. derece; kadin ve erkek adaylar basvurabilir. aranan ogrenim: lisans duzeyinde maliye, isletme, iktisat, muhasebe ve finans yonetimi, bankacilik ve finans, calisma ekonomisi ve endustri iliskileri programlarindan biri. meb onayli bilgisayar isletmeni sertifikasi veya mezun olunan okulda bilgisayar dersi gordugunu belgelemek. kpss: 2026 kpss (b grubu) p3 puan turunden en az 70. basvuru 30.11.2026 – 02.12.2026: personelisleri@karsiyaka.bel.tr adresine e-posta ile ya da bahriye ucok mah. bahriye ucok bulvari no:5 kat:1 karsiyaka/izmir, insan kaynaklari ve egitim mudurlugune sahsen veya iadeli taahhutlu posta ile. sinav sozlu; sinava girecekler 09.12.2026&#x27;da ilan edilir.">
+    <div class="ust"><span class="kurum">Karşıyaka Belediyesi</span></div>
+    <h2>6 bilgisayar işletmeni alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>6</dd></div><div><dt>Görev yeri</dt><dd>İzmir (Karşıyaka)</dd></div><div><dt>Son başvuru</dt><dd>2 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.karsiyaka.bel.tr/2026-kpss-ile-ilk-defa-aciktan-atanmak-uzere-memur-alimi-ilani" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: karsiyaka.bel.tr</p>
+  </article>
+  <article id="acik-0027" data-bitis="2026-12-02" data-kadro="1" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Belediye" data-sehir="kirsehir" data-ara="kirsehir boztepe belediye baskanligi boztepe belediyesi 1 maden muhendisi (memur) alinacak kirsehir (boztepe) lisans kpss p3 en az 60 1 muhendis (th sinifi, 8. derece, memur; ilk defa aciktan atama), boztepe belediye baskanligi, kirsehir; kadin ve erkek adaylar basvurabilir. aranan ogrenim: lisans duzeyinde fakultelerin maden muhendisligi bolumu. en az b sinifi surucu belgesi. kpss: 2026 kpss (b grubu) p3 puan turunden en az 60. basvuru 30/11/2026 – 02/12/2026: bilgi@boztepe.bel.tr adresine e-posta ile ya da belediyeye (mesai gunlerinde 08.30-16.30) sahsen/posta ile. sinav sozludur.">
+    <div class="ust"><span class="kurum">Boztepe Belediyesi</span></div>
+    <h2>1 maden mühendisi (memur) alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Görev yeri</dt><dd>Kırşehir (Boztepe)</dd></div><div><dt>Son başvuru</dt><dd>2 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261023-4-12.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0123" data-bitis="2026-12-02" data-kadro="1" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Belediye" data-sehir="" data-ara="boztepe belediye baskanligi boztepe belediyesi 1 memur alacak (maden muhendisi ) alinacak lisans kpss p3 en az 60 (b) sinifi surucu belgesine sahip olmak en ve tablonun nitelik kisminda belirtilen en az (b) sinifi surucu belgesine sahip olmak">
+    <div class="ust"><span class="kurum">Boztepe Belediyesi</span></div>
+    <h2>1 memur alacak (maden mühendisi ) alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Son başvuru</dt><dd>2 Aralık</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0004" data-bitis="2026-12-03" data-kadro="7" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="kayseri" data-ara="orta anadolu kalkinma ajansi orta anadolu kalkinma ajansi 6 uzman ve 1 destek personeli alinacak kayseri lisans uzman icin kpss en az 80, destek personeli icin en az 70 6 uzman personel ve 1 destek personeli (buro gorevlisi), orta anadolu kalkinma ajansi (merkez kayseri; kayseri, sivas ve yozgat&#x27;ta ajans&#x27;in uygun gorecegi birinde calisma). basvuru 09/11/2026 – 03/12/2026 saat 23.59, e-devlet kariyer kapisi kamu ise alim; elden, e-posta veya posta kabul edilmez. uzman personel-1 (1 kadro): sehir ve bolge planlama, mimarlik, endustriyel tasarim muhendisligi veya cevre muhendisligi lisansi; kpss p1, p2 veya p3&#x27;ten en az 80. uzman personel-2 (2 kadro): muhendislik lisans programlari (uzman personel-1&#x27;deki muhendislik bolumleri haric); kpss p1, p2 veya p3&#x27;ten en az 80. uzman personel-3 (3 kadro): iktisat, isletme, maliye, uluslararasi iliskiler, istatistik, kamu yonetimi, siyaset bilimi ve kamu yonetimi, siyaset bilimi ve uluslararasi iliskiler, ekonomi veya ekonometri lisansi; kpss p11–p26, p29, p30, p34–p48 puan turlerinden (resmi listede belirtilen) en az 80. tum uzmanlar icin son 5 yilda ingilizce yds en az c duzeyi. destek personeli (1 kadro): iktisat, isletme, maliye, uluslararasi iliskiler, istatistik, kamu yonetimi, siyaset bilimi, ekonomi, iletisim, grafik tasarim, halkla iliskiler (ve tanitim), radyo sinema ve televizyon, radyo ve televizyon, gazetecilik lisansi; kpss p1, p2, p3 ve diger listelenen puan turlerinden en az 70.">
+    <div class="ust"><span class="kurum">Orta Anadolu Kalkınma Ajansı</span></div>
+    <h2>6 uzman ve 1 destek personeli alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>7</dd></div><div><dt>Görev yeri</dt><dd>Kayseri</dd></div><div><dt>Son başvuru</dt><dd>3 Aralık, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261019-4-7.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0125" data-bitis="2026-12-03" data-kadro="1" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Belediye" data-sehir="samsun" data-ara="samsun ili asarcik belediye baskanligi samsun asarcik belediyesi 1 memur alinacak samsun lisans kpss p3 puan siralamasi en az (b) sinifi surucu belgesine sahip olmak en ve tablonun nitelik kisminda belirtilen en az (b) sinifi surucu belgesine sahip olmak,">
+    <div class="ust"><span class="kurum">Samsun Asarcık Belediyesi</span></div>
+    <h2>1 memur alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Görev yeri</dt><dd>Samsun</dd></div><div><dt>Son başvuru</dt><dd>3 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261030-4-8.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0065" data-bitis="2026-12-04" data-kadro="13" data-eklendi="2026-11-03" data-egitim="" data-tur="Diğer kurumlar" data-sehir="turkiye turizm tanitim ve gelistirme ajansi" data-ara="kultur ve turizm bakanligi turkiye turizm tanitim ve gelistirme ajansi turizm tanitim ajansi (tga) 13 personel alinacak turkiye turizm tanitim ve gelistirme ajansi ilanin genel sartlarinda kpss sarti yok 13 pozisyon (direktor, hizmet personeli ve destek hizmetleri personeli), sozlu giris sinavi; her pozisyonun 5 kati aday sozluye cagrilir, basari icin en az 70 puan. aday yalniz bir pozisyona basvurur, birden fazlasina basvuru tumuyle gecersiz sayilir. direktor ve hizmet personeli: ek-1&#x27;deki bolumlerden yuksekogrenim mezunu; son iki yil icinde ingilizce, almanca veya fransizca&#x27;dan yds/e-yds en az b seviyesi (bu dillerde %100 yabanci dille egitim veren lisans mezunlarindan belge aranmaz). destek hizmetleri: ek-1&#x27;deki pozisyona ozel sartlar. genel sartlar: t.c. vatandasi, 18 yasini doldurmus, kamu haklarindan mahrum olmamak, gorevini devamli yapmaya engel saglik sorunu bulunmamak. deneyim istenen pozisyonlarda sgk hizmet dokumu ve calisma belgesi gerekir.">
+    <div class="ust"><span class="kurum">Turizm Tanıtım Ajansı (TGA)</span></div>
+    <h2>13 personel alınacak</h2>
+    <ul class="chips"><li>KPSS şartı yok</li></ul>
+    <dl><div><dt>Kadro</dt><dd>13</dd></div><div><dt>Görev yeri</dt><dd>Türkiye Turizm Tanıtım ve Geliştirme Ajansı</dd></div><div><dt>Son başvuru</dt><dd>4 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261103-4-12.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0026" data-bitis="2026-12-04" data-kadro="90" data-eklendi="2026-10-28" data-egitim="onlisans lisans" data-tur="Belediye" data-sehir="izmir" data-ara="izmir buyuksehir belediye baskanligi izmir buyuksehir belediyesi 90 zabita memuru alinacak izmir onlisans · lisans kpss p3 ya da p93, en az 65 90 zabita memuru (g.i.h., memur), izmir buyuksehir belediye baskanligi: 72 kadro erkek, 18 kadro kadin adaylara ayrilmistir (her grupta 4:1 oraninda). lisans (9. derece, 60 kadro; kpss p3 en az 65): ya antrenorluk egitimi, beden egitimi ve spor ogretmenligi, spor yoneticiligi, egzersiz ve spor bilimleri, rekreasyon, engellilerde beden egitimi ve spor ogretmenligi, engellilerde egzersiz ve spor bilimleri programlarindan biri (24 erkek, 6 kadin); ya da yerel yonetimler, kamu yonetimi, siyaset bilimi ve kamu yonetimi programlarindan biri (24 erkek, 6 kadin). onlisans (10. derece, 30 kadro; kpss p93 en az 65): adalet, yerel yonetimler veya ozel guvenlik ve koruma programlarindan biri (24 erkek, 6 kadin). hepsinde: en az b sinifi surucu belgesi; sinav tarihinde 30 yasini doldurmamis olmak; boy erkekte en az 1,67 m, kadinda en az 1,60 m; boyun 1 metreden fazla kismi ile kilo arasinda (+/-) 10 kg&#x27;dan fazla fark olmamasi. basvuru 30/11/2026 – 04/12/2026, mesai saatlerinde (08.30-17.00) yenidogan, 2225 sok. no:2 konak/izmir, zabita dairesi baskanligina yalnizca sahsen; posta ve e-posta kabul edilmez. sinav sozlu ve uygulamalidir.">
+    <div class="ust"><span class="kurum">İzmir Büyükşehir Belediyesi</span></div>
+    <h2>90 zabıta memuru alınacak</h2>
+    <ul class="chips"><li>Önlisans · Lisans</li><li>KPSS en az 65</li></ul>
+    <dl><div><dt>Kadro</dt><dd>90</dd></div><div><dt>Görev yeri</dt><dd>İzmir</dd></div><div><dt>Son başvuru</dt><dd>4 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261025-4-5.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0058" data-bitis="2026-12-04" data-kadro="5" data-eklendi="2026-11-01" data-egitim="lisans" data-tur="Belediye" data-sehir="ankara" data-ara="ankara buyuksehir belediye baskanligi ankara buyuksehir belediyesi 5 mufettis yardimcisi alinacak ankara lisans kpss a grubu p48 en az 75 5 mufettis yardimcisi (gih, 6. derece), kpss p48 (a grubu), en az 75 puan: hukuk, siyasal bilgiler, iktisat, isletme, iktisadi ve idari bilimler fakultelerinden (4 yillik lisans) veya denkligi kabul edilen yurt ici/disi okullardan mezun olmak. ozel sartlar: 2025 veya 2026 kpss a grubuna girmis olmak; yazili sinav tarihinde 35 yasini doldurmamis olmak (26.12.1991 ve sonrasi doganlar); sinava en fazla 1 kez katilmis olmak. basvuru: 23 kasim-4 aralik 2026, mesai saatleri icinde hipodrom cad. no:5 kat:22 yenimahalle/ankara, rehberlik ve teftis kurulu baskanligi; sahsen veya iadeli taahhutlu posta.">
+    <div class="ust"><span class="kurum">Ankara Büyükşehir Belediyesi</span></div>
+    <h2>5 müfettiş yardımcısı alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P48 en az 75</li></ul>
+    <dl><div><dt>Kadro</dt><dd>5</dd></div><div><dt>Görev yeri</dt><dd>Ankara</dd></div><div><dt>Son başvuru</dt><dd>4 Aralık, saat 17.30</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261015-4-8.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0126" data-bitis="2026-12-04" data-kadro="2" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Belediye" data-sehir="" data-ara="doganyol belediye baskanligi doganyol belediyesi 2 sozlesmeli personel alinacak lisans kpss p3 en az 55 en az (b) sinifi surucu belgesine sahip olmak en ve tablonun nitelik kisminda belirtilen en az (b) sinifi surucu belgesine sahip olmak,">
+    <div class="ust"><span class="kurum">Doğanyol Belediyesi</span></div>
+    <h2>2 sözleşmeli personel alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 55</li></ul>
+    <dl><div><dt>Kadro</dt><dd>2</dd></div><div><dt>Son başvuru</dt><dd>4 Aralık</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0128" data-bitis="2026-12-04" data-kadro="2" data-eklendi="2026-11-06" data-egitim="" data-tur="Belediye" data-sehir="" data-ara="karabaglar belediye baskanligi karabaglar belediyesi 2 cevre muhendisi alinacak kpss b_grubu puan siralamasi">
+    <div class="ust"><span class="kurum">Karabağlar Belediyesi</span></div>
+    <h2>2 çevre mühendisi alınacak</h2>
+    <ul class="chips"><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>2</dd></div><div><dt>Son başvuru</dt><dd>4 Aralık</dd></div></dl>
+    <a class="dugme" href="https://kariyerkapisi.gov.tr/IlanDetay?i=9ff8772a-9434-42fb-84ad-f8080f79640d" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kariyerkapisi.gov.tr</p>
+  </article>
+  <article id="acik-0062" data-bitis="2026-12-06" data-kadro="1" data-eklendi="2026-11-02" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="rize" data-ara="dogu karadeniz kalkinma ajansi dogu karadeniz kalkinma ajansi 1 uzman alinacak rize lisans kpss p12, p14, p24, p29 veya p34 en az 80 1 uzman (rize yatirim destek ofisi; tr90 bolgesinde calismayi kabul etmek sart): 4 yillik lisans; iktisat, ekonomi, isletme, kamu yonetimi, uluslararasi iliskiler, istatistik, siyaset bilimi ve kamu yonetimi, siyaset bilimi ve uluslararasi iliskiler bolumleri. kpss p12, p14, p24, p29 ya da p34&#x27;ten en az 80; son 5 yilda yds/e-yds ingilizce en az c duzeyi (taban 70). basvuru: 23 kasim-6 aralik 2026 saat 23.59&#x27;a kadar, e-devlet kariyer kapisi kamu ise alim.">
+    <div class="ust"><span class="kurum">Doğu Karadeniz Kalkınma Ajansı</span></div>
+    <h2>1 uzman alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS en az 80</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Görev yeri</dt><dd>Rize</dd></div><div><dt>Son başvuru</dt><dd>6 Aralık, saat 23.59</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261102-4-4.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0019" data-bitis="2026-12-09" data-kadro="3" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="elazig" data-ara="elazig il ozel idaresi elazig il ozel idaresi 3 sozlesmeli personel alinacak (2 psikolog, 1 sosyal calismaci) elazig lisans kpss p3 en az 60 3 tam zamanli sozlesmeli personel (ilk defa atanmak uzere), elazig il ozel idaresi: 2 psikolog, 1 sosyal calismaci (sh sinifi, 8. derece); kadin ve erkek adaylar basvurabilir. psikolog (2): universitelerin lisans duzeyinde psikoloji bolumu veya yok&#x27;ce denkligi kabul edilmis bolumler. sosyal calismaci (1): sosyal hizmetler bolumu veya yok&#x27;ce denkligi kabul edilmis bolumler. ikisinde de 2026 kpss&#x27;den p3 puan turunden en az 60. basvuru 30/11/2026 – 09/12/2026: ozelidare@elazig.gov.tr adresine e-posta ile ya da elazig il ozel idaresi insan kaynaklari ve egitim mudurlugune (mesai saatleri 08.00-17.00) sahsen veya iadeli taahhutlu posta ile. sozlu sinav: psikolog 06/01/2027, sosyal calismaci 07/01/2027; basari icin en az 60.">
+    <div class="ust"><span class="kurum">Elazığ İl Özel İdaresi</span></div>
+    <h2>3 sözleşmeli personel alınacak (2 psikolog, 1 sosyal çalışmacı)</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>3</dd></div><div><dt>Görev yeri</dt><dd>Elazığ</dd></div><div><dt>Son başvuru</dt><dd>9 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261028-4-9.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0057" data-bitis="2026-12-10" data-kadro="9" data-eklendi="2026-11-01" data-egitim="lisans" data-tur="Belediye" data-sehir="sanliurfa" data-ara="eyyubiye belediye baskanligi eyyubiye belediyesi 9 zabita memuru alinacak sanliurfa (eyyubiye) lisans kpss p3 en az 60 3 zabita memuru (kadin, gih, 11. derece), kpss p3, en az 60 puan: herhangi bir lisans programindan mezun olmak; en az b sinifi surucu belgesi. 6 zabita memuru (erkek, gih, 11. derece), kpss p3, en az 60 puan: herhangi bir lisans programindan mezun olmak; en az b sinifi surucu belgesi. ortak sartlar: sinav tarihinde 30 yasini doldurmamis olmak; boy erkeklerde en az 1,67 m, kadinlarda en az 1,60 m (boyun 1 metreden fazla kismi ile kilo arasinda ±10 kg&#x27;dan fazla fark olmamali). 2026 kpss (b grubu) sonucu aranir. basvuru: 7-10 aralik 2026, 08.00-12.00 ve 13.00-17.00 arasinda hayati harrani mah. akcakale cad. no:3 eyyubiye/sanliurfa adresinde sahsen.">
+    <div class="ust"><span class="kurum">Eyyübiye Belediyesi</span></div>
+    <h2>9 zabıta memuru alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>9</dd></div><div><dt>Görev yeri</dt><dd>Şanlıurfa (Eyyübiye)</dd></div><div><dt>Son başvuru</dt><dd>10 Aralık, saat 17.00</dd></div></dl>
+    <a class="dugme" href="https://www.eyyubiye.bel.tr/icerik/3361/43/ilk-defa-atanmak-uzere-zabita-memuru-alim-ilani" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: eyyubiye.bel.tr</p>
+  </article>
+  <article id="acik-0131" data-bitis="2026-12-10" data-kadro="9" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Belediye" data-sehir="sanliurfa" data-ara="sanliurfa ili eyyubiye belediye baskanligi sanliurfa eyyubiye belediyesi 9 zabita memuru alinacak sanliurfa lisans kpss p3 en az 60 surucu belgesine sahip olmak en ve tablonun nitelik kisminda belirtilen en az (b) sinifi surucu belgesine sahip olmak,">
+    <div class="ust"><span class="kurum">Şanlıurfa Eyyübiye Belediyesi</span></div>
+    <h2>9 zabıta memuru alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>9</dd></div><div><dt>Görev yeri</dt><dd>Şanlıurfa</dd></div><div><dt>Son başvuru</dt><dd>10 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261101-4-3.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0037" data-bitis="2026-12-11" data-kadro="36" data-eklendi="2026-10-28" data-egitim="onlisans lisans" data-tur="Belediye" data-sehir="istanbul" data-ara="gaziosmanpasa belediye baskanligi gaziosmanpasa belediyesi 36 zabita memuru alinacak istanbul (gaziosmanpasa) onlisans · lisans kpss p3 (lisans) / p93 (onlisans) en az 65 18 zabita memuru (gih, 9. derece), kpss p3, en az 65 puan: kamu yonetimi, yerel yonetimler, isletme, siyaset bilimi ve kamu yonetimi, siyaset bilimi, calisma ekonomisi ve endustri iliskileri lisans programlarindan birinden mezun olmak; en az b sinifi surucu belgesi. 5 zabita memuru (gih, 9. derece), kpss p3, en az 65 puan: insaat muhendisligi, cevre muhendisligi, veteriner, gida muhendisligi lisans programlarindan birinden mezun olmak; en az b sinifi surucu belgesi. 13 zabita memuru (gih, 10. derece), kpss p93, en az 65 puan: mahalli idareler, mahalli idareler (zabita), yerel yonetimler, halkla iliskiler, adalet, acil durum ve afet yonetimi, ilk ve acil yardim onlisans programlarindan birinden mezun olmak; en az b sinifi surucu belgesi. ortak sartlar: sinav tarihinde 30 yasini doldurmamis olmak; boy erkeklerde en az 1,67 m, kadinlarda en az 1,60 m (boyun 1 metreden fazla kismi ile kilo arasinda ±10 kg&#x27;dan fazla fark olmamali). toplam 36 kadro, istanbul gaziosmanpasa belediyesi, 657 sayili kanun&#x27;a tabi memur. basvuru: 7-11 aralik 2026, mesai saatlerinde sahsen gaziosmanpasa belediyesi yazi isleri mudurlugune (posta kabul edilmez); sozlu ve uygulamali sinav 28 aralik 2026.">
+    <div class="ust"><span class="kurum">Gaziosmanpaşa Belediyesi</span></div>
+    <h2>36 zabıta memuru alınacak</h2>
+    <ul class="chips"><li>Önlisans · Lisans</li><li>KPSS en az 65</li></ul>
+    <dl><div><dt>Kadro</dt><dd>36</dd></div><div><dt>Görev yeri</dt><dd>İstanbul (Gaziosmanpaşa)</dd></div><div><dt>Son başvuru</dt><dd>11 Aralık, saat 16.30</dd></div></dl>
+    <a class="dugme" href="https://www.gaziosmanpasa.bel.tr/zabita-memuru-alim-ilani" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: gaziosmanpasa.bel.tr</p>
+  </article>
+  <article id="acik-0016" data-bitis="2026-12-11" data-kadro="4" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Belediye" data-sehir="izmir" data-ara="izmir bergama belediye baskanligi bergama belediyesi 4 memur alinacak izmir (bergama) lisans kpss p3 en az 80 4 memur (ilk defa aciktan atama), bergama belediye baskanligi, izmir. ikisinde de 2026 kpss (b grubu) p3 puan turunden en az 80; kadin ve erkek adaylar basvurabilir. memur (g.i.h., 7. derece, 2 kadro): lisans duzeyinde ekonomi, iktisat veya maliye bolumlerinden biri. evlendirme memuru (g.i.h., 8. derece, 2 kadro): lisans duzeyinde uluslararasi iliskiler, maliye veya halkla iliskiler ve tanitim bolumlerinden biri. basvuru: ilanda 09/12/2026 – 11/12/2026 yazar; islamsaray mah. kinik cad. no:120 bergama/izmir insan kaynaklari ve egitim mudurlugune sahsen, iadeli taahhutlu posta ile ya da insankaynaklari@bergama.bel.tr adresine e-posta ile. sinav sozlu; sinava girecekler 16/12/2026&#x27;da ilan edilir.">
+    <div class="ust"><span class="kurum">Bergama Belediyesi</span></div>
+    <h2>4 memur alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 80</li></ul>
+    <dl><div><dt>Kadro</dt><dd>4</dd></div><div><dt>Görev yeri</dt><dd>İzmir (Bergama)</dd></div><div><dt>Son başvuru</dt><dd>11 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261027-4-10.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0028" data-bitis="2026-12-11" data-kadro="1" data-eklendi="2026-10-28" data-egitim="lisans" data-tur="Belediye" data-sehir="manisa" data-ara="manisa akhisar belediye baskanligi akhisar belediyesi 1 makine muhendisi (memur) alinacak manisa (akhisar) lisans kpss p3 en az 70 1 muhendis (th sinifi, 5. derece, memur; ilk defa aciktan atama), akhisar belediye baskanligi, manisa; kadin ve erkek adaylar basvurabilir. aranan ogrenim: lisans duzeyinde makine muhendisligi programi. en az b sinifi surucu belgesi. kpss: 2026 kpss (b grubu) p3 puan turunden en az 70. basvuru 30.11.2026 – 11.12.2026: insankaynaklari@akhisar.bel.tr adresine e-posta ile ya da belediyeye (mesai gunlerinde 08.30-17.30) sahsen/posta ile. sinav sozludur.">
+    <div class="ust"><span class="kurum">Akhisar Belediyesi</span></div>
+    <h2>1 makine mühendisi (memur) alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Görev yeri</dt><dd>Manisa (Akhisar)</dd></div><div><dt>Son başvuru</dt><dd>11 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/10/20261023-4-14.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0132" data-bitis="2026-12-11" data-kadro="36" data-eklendi="2026-11-06" data-egitim="onlisans lisans" data-tur="Belediye" data-sehir="istanbul" data-ara="istanbul ili gaziosmanpasa belediye baskanligi istanbul gaziosmanpasa belediyesi 36 zabita memuru alinacak istanbul onlisans · lisans kpss en az 65 en az (b) sinifi surucu belgesine sahip olmak en az (b) sinifi surucu belgesine sahip olmak en ve tablonun nitelik kisminda belirtilen en az (b) sinifi surucu belgesine sahip olmak,">
+    <div class="ust"><span class="kurum">İstanbul Gaziosmanpaşa Belediyesi</span></div>
+    <h2>36 zabıta memuru alınacak</h2>
+    <ul class="chips"><li>Önlisans · Lisans</li><li>KPSS en az 65</li></ul>
+    <dl><div><dt>Kadro</dt><dd>36</dd></div><div><dt>Görev yeri</dt><dd>İstanbul</dd></div><div><dt>Son başvuru</dt><dd>11 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261101-4-2.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0133" data-bitis="2026-12-11" data-kadro="1" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Belediye" data-sehir="" data-ara="eleskirt belediye baskanligi eleskirt belediyesi 1 memur alinacak lisans kpss p3 puan siralamasi">
+    <div class="ust"><span class="kurum">Eleşkirt Belediyesi</span></div>
+    <h2>1 memur alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Son başvuru</dt><dd>11 Aralık</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0134" data-bitis="2026-12-11" data-kadro="1" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Belediye" data-sehir="" data-ara="akhisar belediye baskanligi akhisar belediyesi 1 memur alinacak lisans kpss p3 puan siralamasi en az (b) sinifi surucu belgesine sahip olmak en ve tablonun nitelik kisminda belirtilen en az (b) sinifi surucu belgesine sahip olmak,">
+    <div class="ust"><span class="kurum">Akhisar Belediyesi</span></div>
+    <h2>1 memur alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Son başvuru</dt><dd>11 Aralık</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0069" data-bitis="2026-12-14" data-kadro="2" data-eklendi="2026-11-04" data-egitim="lisans" data-tur="Diğer kurumlar" data-sehir="afyonkarahisar|kutahya|manisa|usak" data-ara="zafer kalkinma ajansi zafer kalkinma ajansi 2 uzman personel alinacak afyonkarahisar, kutahya, manisa, usak (merkez kutahya) lisans kpss ilgili puan turunden en az 80 (muhendislik p1-p2-p3; diger bolumler icin ayri turler) 1 uzman personel: muhendislik bolumleri veya sehir ve bolge planlama lisans mezunu. kpss p1, p2 veya p3&#x27;ten en az 80. 1 uzman personel: istatistik, ekonometri (p12/p13), iktisat (p14/p15), maliye (p19/p20), isletme (p24/p25), kamu yonetimi (p29/p30), uluslararasi iliskiler (p34/p35) veya calisma ekonomisi ve endustri iliskileri (p39/p40) lisans mezunu; kpss&#x27;den en az 80. ortak sart: yds/e-yds ingilizce en az 70 (son 5 yil; yokdil kabul edilmez). yalniz bir gruba basvurulur. seyahat engeli olmamali; sozlu sinavla alim.">
+    <div class="ust"><span class="kurum">Zafer Kalkınma Ajansı</span></div>
+    <h2>2 uzman personel alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS en az 80</li></ul>
+    <dl><div><dt>Kadro</dt><dd>2</dd></div><div><dt>Görev yeri</dt><dd>Afyonkarahisar, Kütahya, Manisa, Uşak (merkez Kütahya)</dd></div><div><dt>Son başvuru</dt><dd>14 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261104-4-7.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: Resmî Gazete</p>
+  </article>
+  <article id="acik-0017" data-bitis="2026-12-18" data-kadro="9" data-eklendi="2026-10-28" data-egitim="onlisans" data-tur="Belediye" data-sehir="konya" data-ara="konya karatay belediye baskanligi karatay belediyesi 9 zabita memuru alinacak konya (karatay) onlisans kpss p93 en az 60 9 zabita memuru (g.i.h., 7-8. derece, memur), karatay belediye baskanligi, konya; kadin ve erkek adaylar basvurabilir. aranan ogrenim: onlisans; mahalli idareler, mahalli idareler (zabita), yerel yonetimler, pazarlama, pazarlama ve satis veya piyasa arastirmalari ve pazarlama programlarindan biri. kpss: 2026 kpss (b grubu) p93 puan turunden en az 60. ozel sartlar: en az b sinifi surucu belgesi; sinav tarihinde 30 yasini doldurmamis olmak; boy erkekte en az 1,67 m, kadinda en az 1,60 m; boyun 1 metreden fazla kismi ile kilo arasinda (+/-) 10 kg&#x27;dan fazla fark olmamasi. basvuru 14/12/2026 – 18/12/2026, mesai saatlerinde (08.00-17.00) aziziye mah. garaj cad. no:5 karatay/konya, insan kaynaklari ve egitim mudurlugune yalnizca sahsen; posta kabul edilmez. sinav sozlu ve uygulamali; sinava girecekler 25/12/2026&#x27;da ilan edilir.">
+    <div class="ust"><span class="kurum">Karatay Belediyesi</span></div>
+    <h2>9 zabıta memuru alınacak</h2>
+    <ul class="chips"><li>Önlisans</li><li>KPSS P93 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>9</dd></div><div><dt>Görev yeri</dt><dd>Konya (Karatay)</dd></div><div><dt>Son başvuru</dt><dd>18 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.karatay.bel.tr/uploads/976c022f6261c7f8.docx" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: karatay.bel.tr</p>
+  </article>
+  <article id="acik-0136" data-bitis="2026-12-18" data-kadro="1" data-eklendi="2026-11-06" data-egitim="onlisans" data-tur="Belediye" data-sehir="" data-ara="tanoba belediye baskanligi tanoba belediyesi 1 memur alinacak onlisans kpss p93 puan siralamasi">
+    <div class="ust"><span class="kurum">Tanoba Belediyesi</span></div>
+    <h2>1 memur alınacak</h2>
+    <ul class="chips"><li>Önlisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Son başvuru</dt><dd>18 Aralık</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0137" data-bitis="2026-12-23" data-kadro="4" data-eklendi="2026-11-06" data-egitim="onlisans" data-tur="Belediye" data-sehir="" data-ara="ula belediye baskanligi ula belediyesi 4 zabita memuru alinacak onlisans kpss p93 puan siralamasi">
+    <div class="ust"><span class="kurum">Ula Belediyesi</span></div>
+    <h2>4 zabıta memuru alınacak</h2>
+    <ul class="chips"><li>Önlisans</li><li>KPSS şartı: pozisyona göre</li></ul>
+    <dl><div><dt>Kadro</dt><dd>4</dd></div><div><dt>Son başvuru</dt><dd>23 Aralık</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0147" data-bitis="2026-12-23" data-kadro="4" data-eklendi="2026-11-07" data-egitim="onlisans" data-tur="Belediye" data-sehir="mugla" data-ara="mugla ili ula belediye baskanligi mugla ula belediyesi 4 zabita memuru alinacak mugla onlisans kpss p93 en az 70">
+    <div class="ust"><span class="kurum">Muğla Ula Belediyesi</span></div>
+    <h2>4 zabıta memuru alınacak</h2>
+    <ul class="chips"><li>Önlisans</li><li>KPSS P93 en az 70</li></ul>
+    <dl><div><dt>Kadro</dt><dd>4</dd></div><div><dt>Görev yeri</dt><dd>Muğla</dd></div><div><dt>Son başvuru</dt><dd>23 Aralık</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261107-4-12.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  <article id="acik-0138" data-bitis="2026-12-25" data-kadro="1" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Belediye" data-sehir="" data-ara="akseki belediye baskanligi akseki belediyesi 1 memur alinacak lisans kpss p3 en az 75">
+    <div class="ust"><span class="kurum">Akseki Belediyesi</span></div>
+    <h2>1 memur alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 75</li></ul>
+    <dl><div><dt>Kadro</dt><dd>1</dd></div><div><dt>Son başvuru</dt><dd>25 Aralık</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0139" data-bitis="2027-01-05" data-kadro="4" data-eklendi="2026-11-06" data-egitim="lisans" data-tur="Belediye" data-sehir="" data-ara="gundogmus belediye baskanligi gundogmus belediyesi 4 memur alinacak lisans kpss p3 en az 60">
+    <div class="ust"><span class="kurum">Gündoğmuş Belediyesi</span></div>
+    <h2>4 memur alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>4</dd></div><div><dt>Son başvuru</dt><dd>5 Ocak</dd></div></dl>
+    <a class="dugme" href="https://kamuilan.sbb.gov.tr/" rel="noopener">Kurumun sitesini aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: kamuilan.sbb.gov.tr</p><p class="not">Bu bağlantı kurumun ana sayfasıdır; ilan için duyurular bölümüne bakın.</p>
+  </article>
+  <article id="acik-0148" data-bitis="2027-01-05" data-kadro="4" data-eklendi="2026-11-07" data-egitim="lisans" data-tur="Belediye" data-sehir="antalya" data-ara="antalya ili gundogmus belediye baskanligi antalya gundogmus belediyesi 4 memur alinacak antalya lisans kpss p3 en az 60">
+    <div class="ust"><span class="kurum">Antalya Gündoğmuş Belediyesi</span></div>
+    <h2>4 memur alınacak</h2>
+    <ul class="chips"><li>Lisans</li><li>KPSS P3 en az 60</li></ul>
+    <dl><div><dt>Kadro</dt><dd>4</dd></div><div><dt>Görev yeri</dt><dd>Antalya</dd></div><div><dt>Son başvuru</dt><dd>5 Ocak</dd></div></dl>
+    <a class="dugme" href="https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261107-4-11.pdf" rel="noopener">Resmi ilanı aç <span aria-hidden="true">↗</span></a>
+    <p class="kaynak">Kaynak: resmigazete.gov.tr</p>
+  </article>
+  </main>
+  <div class="yok" id="yok" hidden><p><strong>Bu aramaya uyan ilan yok.</strong></p><p>Yazımı değiştirmeyi deneyin.</p><button type="button" class="temizle" id="yok-temizle">Aramayı temizle</button></div>
+  <footer>
+    <p>Bu sayfa bağımsız bir bilgilendirmedir; bir kamu kurumu değildir. Bilgiler resmi ilan metinlerinden derlenir, hata olabilir. Geçerli olan her zaman resmi ilandır.</p>
+    <p>Son güncelleme: 7 Kasım 2026, 21.55</p>
+  </footer>
+</div>
+<script>
+(function(){
+  var liste=document.getElementById('liste'); if(!liste) return;
+  var kartlar=[].slice.call(liste.querySelectorAll('article')); if(!kartlar.length) return;
+  var kutu=document.getElementById('kontrol'); kutu.hidden=false;
+  var TR={'ı':'i','ç':'c','ğ':'g','ö':'o','ş':'s','ü':'u','â':'a','î':'i','û':'u'};
+  function norm(s){return String(s||'').replace(/İ/g,'i').replace(/I/g,'ı').toLowerCase().replace(/[ıçğöşüâîû]/g,function(c){return TR[c];});}
+  var q=document.getElementById('ara'), sira=document.getElementById('sira');
+  var durum=document.getElementById('durum'), temizle=document.getElementById('temizle'), yok=document.getElementById('yok');
+  var simdi=new Date(), bugun=Date.UTC(simdi.getFullYear(),simdi.getMonth(),simdi.getDate());
+  kartlar.forEach(function(k,i){
+    k._i=i; k._ara=k.getAttribute('data-ara');
+    var b=k.getAttribute('data-bitis'); k._kalan=b?Math.round((Date.UTC(+b.slice(0,4),+b.slice(5,7)-1,+b.slice(8,10))-bugun)/86400000):null;
+    var d=k.getAttribute('data-kadro'); k._kadro=d===''?null:+d; k._eklendi=k.getAttribute('data-eklendi')||'';
+  });
+  function gorunur(k,terimler){return !terimler.some(function(t){return k._ara.indexOf(t)<0;});}
+  var SIRALAR={
+    yakin:function(a,b){return (a._kalan===null)-(b._kalan===null)||a._kalan-b._kalan||a._i-b._i;},
+    yeni:function(a,b){return b._eklendi<a._eklendi?-1:b._eklendi>a._eklendi?1:a._i-b._i;},
+    cok:function(a,b){return (a._kadro===null)-(b._kadro===null)||b._kadro-a._kadro||a._i-b._i;},
+    az:function(a,b){return (a._kadro===null)-(b._kadro===null)||a._kadro-b._kadro||a._i-b._i;}
+  };
+  function uygula(){
+    var terimler=norm(q.value).split(/\s+/).filter(Boolean);
+    var gor=kartlar.filter(function(k){var g=gorunur(k,terimler); k.hidden=!g; return g;});
+    kartlar.slice().sort(SIRALAR[sira.value]).forEach(function(k){liste.appendChild(k);});
+    var etkin=terimler.length>0;
+    temizle.hidden=!etkin&&sira.value==='yakin';
+    durum.firstChild.textContent=etkin?gor.length+' ilan gösteriliyor (toplam '+kartlar.length+')':kartlar.length+' ilan';
+    yok.hidden=gor.length>0;
+  }
+  [q,sira].forEach(function(e){e.addEventListener('input',uygula);});
+  function sifirla(){ q.value=''; sira.value='yakin'; uygula(); q.focus(); }
+  temizle.addEventListener('click',sifirla);
+  document.getElementById('yok-temizle').addEventListener('click',sifirla);
+  q.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault(); q.blur();}});
+  uygula();
+})();
+</script>
+</body>
+</html>
