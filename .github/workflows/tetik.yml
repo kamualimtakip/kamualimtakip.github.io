@@ -1,0 +1,17 @@
+name: tetik
+# Zamanlayıcı: GitHub, ücretsiz hesaplardaki özel depolarda zamanlanmış iş çalıştırmaz; herkese açık depolarda çalıştırır.
+# GitHub zamanlanmış işleri yoğunlukta atlıyor (ölçüldü: beklenen tetiklerin ~%15'i çalışıyor); bu yüzden her 10 dakikada denenir,
+# motor kapısı gereksiz çalışmayı engeller. Bu iş akışı her 10 dakikada bir özel motoru "zamanlı" modda tetikler; motor, saati gelmiş tur varsa çalışır, yoksa hemen çıkar.
+on:
+  schedule:
+    - cron: "*/10 5-19 * * *"
+  workflow_dispatch:
+jobs:
+  tetik:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Motoru tetikle
+        env:
+          GH_TOKEN: ${{ secrets.MOTOR_TOKEN }}
+        run: gh workflow run tur.yml --repo muhammeteminbaytar/kamualimtakip-motor --ref master -f zamanli=true
